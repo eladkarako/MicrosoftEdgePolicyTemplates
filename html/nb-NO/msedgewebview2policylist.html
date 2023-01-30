@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---policies"></a>
+<h1>Microsoft Edge WebView2 - Policies</h1>
+The latest version of Microsoft Edge WebView2 includes the following policies. You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.
+
+For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge update policy reference</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>NOTE</p>
+<p>This article applies to Microsoft Edge version 87 or later.</p>
+</div>
+
+<h2>Available policies</h2>
+These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
+
+<table>
+
+<tr><td><a href="#Loader Override Settings">Loader Override Settings</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Loader Override Settings"><a href="#Loader Override Settings-policies"><i>Loader Override Settings</i></a></a>
+    <table>
+      <tr><th>Navn på retningslinje</th><th>Caption</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Configure the location of the browser executable folder</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Set the release channel search order preference</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Navn på retningslinje</th><th>Caption</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Control communication with the Experimentation and Configuration Service</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Loader Override Settings-policies"></a>Loader Override Settings policies</h2>
+  <br /><a href="#microsoft-edge-webview2---policies">Tilbake til toppen</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Configure the location of the browser executable folder</h4>
+  
+  
+  <h5>Supported versions:</h5>
+  <ul><li>On Windows since 87 or later</li></ul>
+
+  <h5>Beskrivelse</h5>
+  This policy configures WebView2 applications to use the WebView2 Runtime in the specified path. The folder should contain the following files: msedgewebview2.exe, msedge.dll, and so on.<br><br>To set the value for the folder path, provide a Value name and Value pair. Set value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
+
+  <h5>Støttede funksjoner:</h5>
+  <ul>
+  <li>
+      Can be mandatory:
+       Ja
+  </li>
+  <li>
+      Can be recommended:
+       Nei
+  </li>
+  <li>
+      Dynamisk oppdatering av retningslinje:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Data Type:</h5>
+  <ul><li>List of strings</li></ul>
+
+
+  
+  <h5>Windows information and settings</h5>
+  <h6>Group Policy (ADMX) info</h6>
+  <ul>
+  <li>GP unique name: BrowserExecutableFolder</li>
+  <li>GP name: Configure the location of the browser executable folder</li>
+  <li>GP path (Mandatory):
+    
+        Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+    </li>
+  <li>GP path (Recommended):
+    N/A</li>
+  <li>GP ADMX file name: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Registry Settings</h6>
+  <ul>
+  <li>Path (Mandatory):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Path (Recommended):
+    N/A</li>
+  <li>Value Name:
+    list of REG_SZ
+    </li>
+  <li>Value Type:
+    list of REG_SZ
+    </li>
+  </ul>
+  <h6>Eksempelverdi:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---policies">Tilbake til toppen</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Set the release channel search order preference</h4>
+  
+  
+  <h5>Supported versions:</h5>
+  <ul><li>On Windows since 87 or later</li></ul>
+
+  <h5>Beskrivelse</h5>
+  The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.<br><br>To reverse the default search order, set this policy to 1.<br><br>To set the value for the release channel preference, provide a Value name and Value pair. Set value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
+
+  <h5>Støttede funksjoner:</h5>
+  <ul>
+  <li>
+      Can be mandatory:
+       Ja
+  </li>
+  <li>
+      Can be recommended:
+       Nei
+  </li>
+  <li>
+      Dynamisk oppdatering av retningslinje:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Data Type:</h5>
+  <ul><li>List of strings</li></ul>
+
+
+  
+  <h5>Windows information and settings</h5>
+  <h6>Group Policy (ADMX) info</h6>
+  <ul>
+  <li>GP unique name: ReleaseChannelPreference</li>
+  <li>GP name: Set the release channel search order preference</li>
+  <li>GP path (Mandatory):
+    
+        Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+    </li>
+  <li>GP path (Recommended):
+    N/A</li>
+  <li>GP ADMX file name: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Registry Settings</h6>
+  <ul>
+  <li>Path (Mandatory):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Path (Recommended):
+    N/A</li>
+  <li>Value Name:
+    list of REG_SZ
+    </li>
+  <li>Value Type:
+    list of REG_SZ
+    </li>
+  </ul>
+  <h6>Eksempelverdi:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---policies">Tilbake til toppen</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---policies">Tilbake til toppen</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Control communication with the Experimentation and Configuration Service</h4>
+  
+  
+  <h5>Supported versions:</h5>
+  <ul><li>On Windows since 97 or later</li></ul>
+
+  <h5>Beskrivelse</h5>
+  The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.<br><br>Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.<br><br>Configuration payload consists of a list of recommended settings that Microsoft wants to deploy to optimize the user experience.<br><br>Configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.<br><br>If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.<br><br>If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.<br><br>If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.<br><br>If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.<br><br>If you don't configure this policy on an unmanaged device, the behavior is the same as the 'FullMode'.<br><br>Policy options mapping:<br><br>* FullMode (2) = Retrieve configurations and experiments<br><br>* ConfigurationsOnlyMode (1) = Retrieve configurations only<br><br>* RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service<br><br>Use the preceding information when configuring this policy.
+
+  <h5>Støttede funksjoner:</h5>
+  <ul>
+  <li>
+      Can be mandatory:
+       Ja
+  </li>
+  <li>
+      Can be recommended:
+       Nei
+  </li>
+  <li>
+      Dynamisk oppdatering av retningslinje:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Data Type:</h5>
+  <ul><li>Integer</li></ul>
+
+
+  
+  <h5>Windows information and settings</h5>
+  <h6>Group Policy (ADMX) info</h6>
+  <ul>
+  <li>GP unique name: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP name: Control communication with the Experimentation and Configuration Service</li>
+  <li>GP path (Mandatory):
+    
+        Administrative Templates/Microsoft Edge WebView2/
+    </li>
+  <li>GP path (Recommended):
+    N/A</li>
+  <li>GP ADMX file name: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Registry Settings</h6>
+  <ul>
+  <li>Path (Mandatory):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Path (Recommended):
+    N/A</li>
+  <li>Value Name:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Value Type:
+    REG_DWORD</li>
+  </ul>
+  <h6>Eksempelverdi:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---policies">Tilbake til toppen</a>
+
+
+
+<h2>See also</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Configuring Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge Enterprise landing page</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Security Baselines Blog</a></li>
+</ul>
+
+</body>
+</html>

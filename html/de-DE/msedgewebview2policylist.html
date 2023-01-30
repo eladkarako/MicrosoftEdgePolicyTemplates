@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-richtlinien"></a>
+<h1>Microsoft Edge WebView2 – Richtlinien</h1>
+Die neueste Version von Microsoft Edge WebView2 enthält die folgenden Richtlinien. Mit diesen Richtlinien können Sie konfigurieren, wie Microsoft Edge WebView2 in Ihrer Organisation ausgeführt wird.
+
+Informationen zu einem zusätzlichen Satz von Richtlinien, die steuern, wie und wann Microsoft Edge WebView2 aktualisiert wird, finden Sie unter <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge Update: Verweis auf Richtlinie</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>HINWEIS</p>
+<p>Dieser Artikel gilt für Microsoft Edge, Version 87 oder höher.</p>
+</div>
+
+<h2>Verfügbare Richtlinien</h2>
+In diesen Tabellen werden alle Gruppenrichtlinien aufgelistet, die in dieser Version von Microsoft Edge WebView2 verfügbar sind. Unter den Links in der Tabelle finden Sie weitere Informationen zu bestimmten Richtlinien.
+
+<table>
+
+<tr><td><a href="#Ladeprogramm-Override-Einstellungen">Ladeprogramm-Override-Einstellungen</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Ladeprogramm-Override-Einstellungen"><a href="#Ladeprogramm-Override-Einstellungen-policies"><i>Ladeprogramm-Override-Einstellungen</i></a></a>
+    <table>
+      <tr><th>Richtlinienname</th><th>Beschriftung</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Speicherort des ausführbaren Browser Ordners konfigurieren</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Einstellung für die Suchreihenfolge des Releasekanals festlegen</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Richtlinienname</th><th>Beschriftung</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Kommunikation mit Experimentier- und Konfigurationsdienst steuern</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Ladeprogramm-Override-Einstellungen-policies"></a>Ladeprogramm-Override-Einstellungen policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-richtlinien">Zurück nach oben</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Speicherort des ausführbaren Browser Ordners konfigurieren</h4>
+  
+  
+  <h5>Unterstützte Versionen:</h5>
+  <ul><li>Unter Windows seit Version 87 oder höher</li></ul>
+
+  <h5>Beschreibung</h5>
+  Diese Richtlinie konfiguriert WebView2-Anwendungen, sodass sie die WebView2-Laufzeit im festgelegten Pfad verwenden. Der Ordner muss die folgenden Dateien enthalten: msedgewebview2.exe, msedge.dll usw.<br><br>Vergeben Sie einen Wertnamen und ein Wertpaar, um den Wert für den Ordnerpfad festzulegen. Vergeben Sie als Wertnamen die Anwendungsbenutzermodell-ID oder den Namen der ausführbaren Datei. Sie können den Platzhalter “*” als Wertnamen verwenden. Dadurch wird er für alle Anwendungen übernommen.
+
+  <h5>Unterstützte Features:</h5>
+  <ul>
+  <li>
+      Kann zwingend sein:
+       Ja
+  </li>
+  <li>
+      Kann empfohlen werden:
+       Nein
+  </li>
+  <li>
+      Dynamische Richtlinienaktualisierung:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datentyp:</h5>
+  <ul><li>Liste der Zeichenfolgen</li></ul>
+
+
+  
+  <h5>Windows-Informationen und-Einstellungen</h5>
+  <h6>Informationen zur Gruppenrichtlinie (ADMX)</h6>
+  <ul>
+  <li>Eindeutiger Name der Gruppenrichtlinie: BrowserExecutableFolder</li>
+  <li>Gruppenrichtlinienname: Speicherort des ausführbaren Browser Ordners konfigurieren</li>
+  <li>Gruppenrichtlinienpfad (Erforderlich):
+    
+        Administrative Vorlagen/Microsoft Edge WebView2/Ladeprogramm-Override-Einstellungen
+    </li>
+  <li>Gruppenrichtlinienpfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Name der ADMX-Datei der Gruppenrichtlinie: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-Registrierungseinstellungen</h6>
+  <ul>
+  <li>Pfad (Erforderlich):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Pfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Wertname:
+    Liste von REG_SZ
+    </li>
+  <li>Werttyp:
+    Liste von REG_SZ
+    </li>
+  </ul>
+  <h6>Beispielwert:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-richtlinien">Zurück nach oben</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Einstellung für die Suchreihenfolge des Releasekanals festlegen</h4>
+  
+  
+  <h5>Unterstützte Versionen:</h5>
+  <ul><li>Unter Windows seit Version 87 oder höher</li></ul>
+
+  <h5>Beschreibung</h5>
+  Die standardmäßige Suchreihenfolge für Kanäle lautet: WebView2 Runtime, Beta, Dev und Canary.<br><br>Legen Sie diese Richtlinie auf "1" fest, um die standardmäßige Suchreihenfolge umzukehren.<br><br>Um den Wert für die Einstellung des Releasekanals festzulegen, geben Sie einen Wertnamen und ein Wertpaar an. Vergeben Sie als Wertnamen die Anwendungsbenutzermodell-ID oder den Namen der ausführbaren Datei. Sie können den Platzhalter “*” als Wertnamen verwenden. Dadurch wird er für alle Anwendungen übernommen.
+
+  <h5>Unterstützte Features:</h5>
+  <ul>
+  <li>
+      Kann zwingend sein:
+       Ja
+  </li>
+  <li>
+      Kann empfohlen werden:
+       Nein
+  </li>
+  <li>
+      Dynamische Richtlinienaktualisierung:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datentyp:</h5>
+  <ul><li>Liste der Zeichenfolgen</li></ul>
+
+
+  
+  <h5>Windows-Informationen und-Einstellungen</h5>
+  <h6>Informationen zur Gruppenrichtlinie (ADMX)</h6>
+  <ul>
+  <li>Eindeutiger Name der Gruppenrichtlinie: ReleaseChannelPreference</li>
+  <li>Gruppenrichtlinienname: Einstellung für die Suchreihenfolge des Releasekanals festlegen</li>
+  <li>Gruppenrichtlinienpfad (Erforderlich):
+    
+        Administrative Vorlagen/Microsoft Edge WebView2/Ladeprogramm-Override-Einstellungen
+    </li>
+  <li>Gruppenrichtlinienpfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Name der ADMX-Datei der Gruppenrichtlinie: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-Registrierungseinstellungen</h6>
+  <ul>
+  <li>Pfad (Erforderlich):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Pfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Wertname:
+    Liste von REG_SZ
+    </li>
+  <li>Werttyp:
+    Liste von REG_SZ
+    </li>
+  </ul>
+  <h6>Beispielwert:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-richtlinien">Zurück nach oben</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-richtlinien">Zurück nach oben</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Kommunikation mit Experimentier- und Konfigurationsdienst steuern</h4>
+  
+  
+  <h5>Unterstützte Versionen:</h5>
+  <ul><li>Unter Windows seit Version 97 oder höher</li></ul>
+
+  <h5>Beschreibung</h5>
+  Der Experimentier- und Konfigurationsdienst wird verwendet, um Experimentier- und Konfigurationspayloads auf dem Client bereitzustellen.<br><br>Die Experimentierpayload besteht aus einer Liste der frühen Entwicklungsfeatures, die Microsoft für Tests und Feedback aktiviert.<br><br>Die Konfigurationspayload besteht aus einer Liste empfohlener Einstellungen, die Microsoft bereitstellen möchte, um die Benutzererfahrung zu optimieren.<br><br>Die Konfigurationspayload kann auch eine Liste von Aktionen enthalten, die aus Kompatibilitätsgründen für bestimmte Domänen ausgeführt werden müssen. Beispielsweise kann der Browser die Zeichenfolge des Benutzer-Agent auf einer Website überschreiben, wenn diese Website beschädigt ist. Jede dieser Aktionen soll temporär sein, während Microsoft versucht, das Problem mit dem Websitebesitzer zu beheben.<br><br>Wenn Sie diese Richtlinie auf 'FullMode' festlegen, wird die vollständige Payload aus dem Experimentier- und Konfigurationsdienst heruntergeladen. Dies schließt sowohl die Experimentier- als auch die Konfigurationspayload ein.<br><br>Wenn Sie diese Richtlinie auf 'ConfigurationsOnlyMode' festlegen, wird nur die Konfigurationspayload heruntergeladen.<br><br>Wenn Sie diese Richtlinie auf 'RestrictedMode' festlegen, wird die Kommunikation mit dem Experimentier- und Konfigurationsdienst vollständig beendet. Microsoft empfiehlt diese Einstellung nicht.<br><br>Wenn Sie diese Richtlinie nicht auf einem verwalteten Gerät konfigurieren, entspricht das Verhalten in Beta- und Stabilen Kanälen dem 'ConfigurationsOnlyMode'. In Canary- und Dev-Kanälen entspricht das Verhalten 'FullMode'.<br><br>Wenn Sie diese Richtlinie nicht auf einem nicht verwalteten Gerät konfigurieren, ist das Verhalten mit 'FullMode' identisch.<br><br>Zuordnung der Richtlinienoptionen:<br><br>* FullMode (2) = Konfigurationen und Experimente abrufen<br><br>* ConfigurationsOnlyMode (1) = Nur Konfigurationen abrufen<br><br>* RestrictedMode (0) = Kommunikation mit Experimentier- und Konfigurationsdienst deaktivieren<br><br>Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
+
+  <h5>Unterstützte Features:</h5>
+  <ul>
+  <li>
+      Kann zwingend sein:
+       Ja
+  </li>
+  <li>
+      Kann empfohlen werden:
+       Nein
+  </li>
+  <li>
+      Dynamische Richtlinienaktualisierung:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datentyp:</h5>
+  <ul><li>Ganze Zahl</li></ul>
+
+
+  
+  <h5>Windows-Informationen und-Einstellungen</h5>
+  <h6>Informationen zur Gruppenrichtlinie (ADMX)</h6>
+  <ul>
+  <li>Eindeutiger Name der Gruppenrichtlinie: ExperimentationAndConfigurationServiceControl</li>
+  <li>Gruppenrichtlinienname: Kommunikation mit Experimentier- und Konfigurationsdienst steuern</li>
+  <li>Gruppenrichtlinienpfad (Erforderlich):
+    
+        Administrative Vorlagen/Microsoft Edge WebView2/
+    </li>
+  <li>Gruppenrichtlinienpfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Name der ADMX-Datei der Gruppenrichtlinie: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-Registrierungseinstellungen</h6>
+  <ul>
+  <li>Pfad (Erforderlich):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Pfad (Empfohlen):
+    Nicht zutreffend</li>
+  <li>Wertname:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Werttyp:
+    REG_DWORD</li>
+  </ul>
+  <h6>Beispielwert:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-richtlinien">Zurück nach oben</a>
+
+
+
+<h2>Siehe auch</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Konfigurieren von Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge: Zielseite für Unternehmen</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog zu Microsoft Security-Baselines</a></li>
+</ul>
+
+</body>
+</html>

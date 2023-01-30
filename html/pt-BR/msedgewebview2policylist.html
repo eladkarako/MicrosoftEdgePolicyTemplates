@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---políticas"></a>
+<h1>Microsoft Edge WebView2 - Políticas</h1>
+A versão mais recente do Microsoft Edge WebView2 inclui as seguintes políticas. Você pode usá-las para configurar como o Microsoft Edge WebView2 será executado em sua organização.
+
+Para saber mais sobre um conjunto adicional de políticas usadas para controlar como e quando o Microsoft Edge WebView2 é atualizado, confira <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Referência de política de atualização do Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>OBSERVAÇÃO</p>
+<p>Este artigo se aplica a versão 87 ou posterior do Microsoft Edge.</p>
+</div>
+
+<h2>Políticas disponíveis</h2>
+Essas tabelas listam todas as políticas de grupo disponíveis nesta versão do Microsoft Edge WebView2. Use os links na tabela para obter mais detalhes sobre políticas específicas.
+
+<table>
+
+<tr><td><a href="#Configurações de substituição do carregador">Configurações de substituição do carregador</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Configurações de substituição do carregador"><a href="#Configurações de substituição do carregador-policies"><i>Configurações de substituição do carregador</i></a></a>
+    <table>
+      <tr><th>Nome da Política</th><th>Legenda</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Configurar o local da pasta executável do navegador</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Definir a preferência de ordem de pesquisa do canal de lançamento</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Nome da Política</th><th>Legenda</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Controlar a comunicação com o Serviço de Configuração e Experimentação</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Configurações de substituição do carregador-policies"></a>Configurações de substituição do carregador policies</h2>
+  <br /><a href="#microsoft-edge-webview2---políticas">Voltar ao início</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Configurar o local da pasta executável do navegador</h4>
+  
+  
+  <h5>Versões com suporte:</h5>
+  <ul><li>No Windows desde a versão 87 ou posterior</li></ul>
+
+  <h5>Descrição</h5>
+  Esta política configura aplicativos WebView2 para usar o WebView2 Runtime no caminho especificado. A pasta deve conter os seguintes arquivos: msedgewebview2.exe, msedge.dll e assim por diante.<br><br>Para definir o valor do caminho da pasta, forneça um Nome de valor e do Par do valor. Defina o nome do valor como a ID do modelo de usuário do aplicativo ou o nome do arquivo executável. Você pode usar o caractere curinga "*" como nome do valor para aplicar a todos os aplicativos.
+
+  <h5>Recursos com suporte:</h5>
+  <ul>
+  <li>
+      Pode ser obrigatório:
+       Sim
+  </li>
+  <li>
+      Pode ser recomendado:
+       Não
+  </li>
+  <li>
+      Atualização de política dinâmica:
+      
+      Sim
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de Dados:</h5>
+  <ul><li>Lista de cadeias de caracteres</li></ul>
+
+
+  
+  <h5>Informações e configurações do Windows</h5>
+  <h6>Informações da Política de Grupo (ADMX)</h6>
+  <ul>
+  <li>Nome exclusivo da GP: BrowserExecutableFolder</li>
+  <li>Nome da GP: Configurar o local da pasta executável do navegador</li>
+  <li>Caminho da GP (Obrigatório):
+    
+        Modelos Administrativos/Microsoft Edge WebView2/Configurações de substituição do carregador
+    </li>
+  <li>Caminho da GP (Recomendações):
+    N/A</li>
+  <li>Nome do arquivo da GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configurações do Registro do Windows</h6>
+  <ul>
+  <li>Caminho (Obrigatório):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Caminho (Recomendações):
+    N/A</li>
+  <li>Nome do Valor:
+    lista de REG_SZ
+    </li>
+  <li>Tipo de Valor:
+    lista de REG_SZ
+    </li>
+  </ul>
+  <h6>Exemplo de valor:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---políticas">Voltar ao início</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Definir a preferência de ordem de pesquisa do canal de lançamento</h4>
+  
+  
+  <h5>Versões com suporte:</h5>
+  <ul><li>No Windows desde a versão 87 ou posterior</li></ul>
+
+  <h5>Descrição</h5>
+  O pedido de pesquisa de canal padrão é WebView2 Runtime, Beta, Dev e Canary.<br><br>Para inverter a ordem de pesquisa padrão, defina essa política como 1.<br><br>Para definir o valor para a preferência de canal de lançamento, forneça um Nome de valor e Par de valor. Defina o nome do valor como a ID do modelo de usuário do aplicativo ou o nome do arquivo executável. Você pode usar o caractere curinga "*" como nome do valor a ser aplicado a todos os aplicativos.
+
+  <h5>Recursos com suporte:</h5>
+  <ul>
+  <li>
+      Pode ser obrigatório:
+       Sim
+  </li>
+  <li>
+      Pode ser recomendado:
+       Não
+  </li>
+  <li>
+      Atualização de política dinâmica:
+      
+      Sim
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de Dados:</h5>
+  <ul><li>Lista de cadeias de caracteres</li></ul>
+
+
+  
+  <h5>Informações e configurações do Windows</h5>
+  <h6>Informações da Política de Grupo (ADMX)</h6>
+  <ul>
+  <li>Nome exclusivo da GP: ReleaseChannelPreference</li>
+  <li>Nome da GP: Definir a preferência de ordem de pesquisa do canal de lançamento</li>
+  <li>Caminho da GP (Obrigatório):
+    
+        Modelos Administrativos/Microsoft Edge WebView2/Configurações de substituição do carregador
+    </li>
+  <li>Caminho da GP (Recomendações):
+    N/A</li>
+  <li>Nome do arquivo da GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configurações do Registro do Windows</h6>
+  <ul>
+  <li>Caminho (Obrigatório):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Caminho (Recomendações):
+    N/A</li>
+  <li>Nome do Valor:
+    lista de REG_SZ
+    </li>
+  <li>Tipo de Valor:
+    lista de REG_SZ
+    </li>
+  </ul>
+  <h6>Exemplo de valor:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---políticas">Voltar ao início</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---políticas">Voltar ao início</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Controlar a comunicação com o Serviço de Configuração e Experimentação</h4>
+  
+  
+  <h5>Versões com suporte:</h5>
+  <ul><li>No Windows desde a versão 97 ou posterior</li></ul>
+
+  <h5>Descrição</h5>
+  O Serviço de Configuração e Experimentação é usado para implantar conteúdos de Configuração e Experimentação para o cliente.<br><br>O conteúdo de experimentação consiste em uma lista de recursos iniciais de desenvolvimento que a Microsoft está habilitando para testes e comentários.<br><br>O conteúdo de configuração consiste em uma lista de configurações recomendadas que a Microsoft deseja implantar para otimizar a experiência do usuário.<br><br>O conteúdo da configuração também pode conter uma lista de ações a serem executadas em determinados domínios por razões de compatibilidade. Por exemplo, o navegador pode substituir a cadeia de caracteres de Agente de Usuário em um site se esse site estiver quebrado. Cada uma dessas ações deve ser temporária enquanto a Microsoft tenta resolver o problema com o proprietário do site.<br><br>Se você definir essa política como 'FullMode', o conteúdo total será baixado do Serviço de Configuração e Experimentação. Isso inclui os conteúdos de Configuração e Experimentação.<br><br>Se você definir esta política como 'ConfigurationsOnlyMode', somente o conteúdo de configuração será baixado.<br><br>Se você definir essa política como 'RestrictedMode', a comunicação com o Serviço de Configuração e Experimentação será interrompido completamente. A Microsoft não recomenda essa configuração.<br><br>Se você não configurar essa política em um dispositivo gerenciado, o comportamento nos canais Beta e Estável será o mesmo que no 'ConfigurationsOnlyMode'. Nos canais Canary e Dev, o comportamento é o mesmo que no 'FullMode'.<br><br>Se você não configurar essa política em um dispositivo não gerenciado, o comportamento será o mesmo que no 'FullMode'.<br><br>Mapeamento das opções da política:<br><br>* FullMode (2) = Recuperar configurações e experimentos<br><br>* ConfigurationsOnlyMode (1) = Recuperar apenas configurações<br><br>* RestrictedMode (0) = Desabilitar a comunicação com o Serviço de Configuração e Experimentação<br><br>Use as informações anteriores ao configurar essa política.
+
+  <h5>Recursos com suporte:</h5>
+  <ul>
+  <li>
+      Pode ser obrigatório:
+       Sim
+  </li>
+  <li>
+      Pode ser recomendado:
+       Não
+  </li>
+  <li>
+      Atualização de política dinâmica:
+      
+      Sim
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de Dados:</h5>
+  <ul><li>Número inteiro</li></ul>
+
+
+  
+  <h5>Informações e configurações do Windows</h5>
+  <h6>Informações da Política de Grupo (ADMX)</h6>
+  <ul>
+  <li>Nome exclusivo da GP: ExperimentationAndConfigurationServiceControl</li>
+  <li>Nome da GP: Controlar a comunicação com o Serviço de Configuração e Experimentação</li>
+  <li>Caminho da GP (Obrigatório):
+    
+        Modelos Administrativos/Microsoft Edge WebView2/
+    </li>
+  <li>Caminho da GP (Recomendações):
+    N/A</li>
+  <li>Nome do arquivo da GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configurações do Registro do Windows</h6>
+  <ul>
+  <li>Caminho (Obrigatório):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Caminho (Recomendações):
+    N/A</li>
+  <li>Nome do Valor:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Tipo de Valor:
+    REG_DWORD</li>
+  </ul>
+  <h6>Exemplo de valor:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---políticas">Voltar ao início</a>
+
+
+
+<h2>Consulte também</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Configurando o Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Página inicial do Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog das Linhas de Base de Segurança da Microsoft</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---beleid"></a>
+<h1>Microsoft Edge WebView2 - Beleid</h1>
+De nieuwste versie van Microsoft Edge WebView2 bevat de volgende beleidsregels. Met deze beleidsregels kunt u configureren hoe Microsoft Edge WebView2 wordt uitgevoerd in uw organisatie.
+
+Voor informatie over een aanvullende reeks van beleidsregels die u kunt gebruiken om te bepalen hoe en wanneer Microsoft Edge WebView2 wordt bijgewerkt, raadpleegt u <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Verwijzing naar updatebeleid voor Microsoft Edge</a>
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>OPMERKING</p>
+<p>Dit artikel is van toepassing op Microsoft Edge versie 87 of hoger.</p>
+</div>
+
+<h2>Beschikbare beleidsregels</h2>
+Deze tabellen bevatten alle groepsbeleidsregels die beschikbaar zijn in deze release van Microsoft Edge WebView2. Gebruik de koppelingen in de tabel voor meer informatie over specifiek beleid.
+
+<table>
+
+<tr><td><a href="#Overschrijvingsinstellingen voor laadprogramma">Overschrijvingsinstellingen voor laadprogramma</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Overschrijvingsinstellingen voor laadprogramma"><a href="#Overschrijvingsinstellingen voor laadprogramma-policies"><i>Overschrijvingsinstellingen voor laadprogramma</i></a></a>
+    <table>
+      <tr><th>Beleidsnaam</th><th>Bijschrift</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>De locatie van de uitvoerbare map van de browser configureren</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>De voorkeur voor de zoekvolgorde van vrijgavekanalen instellen</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Beleidsnaam</th><th>Bijschrift</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Communicatie met de Experimenteer- en Configuratieservice beheren</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Overschrijvingsinstellingen voor laadprogramma-policies"></a>Overschrijvingsinstellingen voor laadprogramma policies</h2>
+  <br /><a href="#microsoft-edge-webview2---beleid">Terug naar boven</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>De locatie van de uitvoerbare map van de browser configureren</h4>
+  
+  
+  <h5>Ondersteunde versies:</h5>
+  <ul><li>Op Windows vanaf 87 of later</li></ul>
+
+  <h5>Beschrijving</h5>
+  Dit beleid configureert WebView2-toepassingen om de WebView2 Runtime in het opgegeven pad te gebruiken. De map moet de volgende bestanden bevatten: msedgewebview2.exe, msedge.dll, enzovoort.<br><br>Geef een waarde-naam en waarde-paar op om de waarde voor het mappad in te stellen. Stel de waardenaam in op de Gebruikersmodel-ID van de toepassen of de naam van het uitvoerbare bestand. U kunt het jokerteken '*' als waardenaam gebruiken voor alle toepassingen.
+
+  <h5>Ondersteunde functies:</h5>
+  <ul>
+  <li>
+      Kan verplicht zijn:
+       Ja
+  </li>
+  <li>
+      Kan worden aangeraden:
+       Nee
+  </li>
+  <li>
+      Dynamische beleidsvernieuwing:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Gegevenstype:</h5>
+  <ul><li>Lijst met tekenreeksen</li></ul>
+
+
+  
+  <h5>Windows-informatie en -instellingen</h5>
+  <h6>Info over groepsbeleid (ADMX)</h6>
+  <ul>
+  <li>Unieke GP-naam: BrowserExecutableFolder</li>
+  <li>GP-naam: De locatie van de uitvoerbare map van de browser configureren</li>
+  <li>GP-pad (Verplicht):
+    
+        Beheersjablonen/Microsoft Edge WebView2/Overschrijvingsinstellingen voor laadprogramma
+    </li>
+  <li>GP-pad (Aanbevolen):
+    N.v.t.</li>
+  <li>GP ADMX-bestandsnaam: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinstellingen</h6>
+  <ul>
+  <li>Pad (Verplicht):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Pad (Aanbevolen):
+    N.v.t.</li>
+  <li>Waardenaam:
+    lijst met REG_SZ
+    </li>
+  <li>Waardetype:
+    lijst met REG_SZ
+    </li>
+  </ul>
+  <h6>Voorbeeldwaarde:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---beleid">Terug naar boven</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>De voorkeur voor de zoekvolgorde van vrijgavekanalen instellen</h4>
+  
+  
+  <h5>Ondersteunde versies:</h5>
+  <ul><li>Op Windows vanaf 87 of later</li></ul>
+
+  <h5>Beschrijving</h5>
+  De standaard zoekvolgorde voor kanalen is WebView2 Runtime, Bèta, Dev en Canary.<br><br>Stel dit beleid in op 1 om de standaardzoekvolgorde om te keren.<br><br>Geef een waarde-naam en waarde-paar op om de waarde voor de voorkeur voor het releasekanaal in te stellen. Stel de waardenaam in op de Gebruikersmodel- ID of de naam van het uitvoerbare bestand. U kunt het jokerteken '*' als waardenaam gebruiken voor alle toepassingen.
+
+  <h5>Ondersteunde functies:</h5>
+  <ul>
+  <li>
+      Kan verplicht zijn:
+       Ja
+  </li>
+  <li>
+      Kan worden aangeraden:
+       Nee
+  </li>
+  <li>
+      Dynamische beleidsvernieuwing:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Gegevenstype:</h5>
+  <ul><li>Lijst met tekenreeksen</li></ul>
+
+
+  
+  <h5>Windows-informatie en -instellingen</h5>
+  <h6>Info over groepsbeleid (ADMX)</h6>
+  <ul>
+  <li>Unieke GP-naam: ReleaseChannelPreference</li>
+  <li>GP-naam: De voorkeur voor de zoekvolgorde van vrijgavekanalen instellen</li>
+  <li>GP-pad (Verplicht):
+    
+        Beheersjablonen/Microsoft Edge WebView2/Overschrijvingsinstellingen voor laadprogramma
+    </li>
+  <li>GP-pad (Aanbevolen):
+    N.v.t.</li>
+  <li>GP ADMX-bestandsnaam: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinstellingen</h6>
+  <ul>
+  <li>Pad (Verplicht):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Pad (Aanbevolen):
+    N.v.t.</li>
+  <li>Waardenaam:
+    lijst met REG_SZ
+    </li>
+  <li>Waardetype:
+    lijst met REG_SZ
+    </li>
+  </ul>
+  <h6>Voorbeeldwaarde:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---beleid">Terug naar boven</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---beleid">Terug naar boven</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Communicatie met de Experimenteer- en Configuratieservice beheren</h4>
+  
+  
+  <h5>Ondersteunde versies:</h5>
+  <ul><li>Op Windows vanaf 97 of later</li></ul>
+
+  <h5>Beschrijving</h5>
+  De Experimenteer- en Configuratieservice wordt gebruikt om nettoladingen voor experimenten en configuratie te implementeren op de client.<br><br>Nettolading voor experimenten bestaat uit een lijst met functies in een vroege ontwikkelingsfase die Microsoft inschakelt voor testen en feedback.<br><br>Nettolading voor configuratie bestaat uit een lijst met aanbevolen instellingen die Microsoft wil implementeren om de gebruikerservaring te optimaliseren.<br><br>Nettolading voor configuratie kan ook een lijst bevatten met acties die voor bepaalde domeinen moeten worden uitgevoerd om compatibiliteitsredenen. De browser kan bijvoorbeeld de tekenreeks van de gebruikersagent op een website overschrijven als die website is beschadigd. Elk van deze acties is bedoeld als tijdelijke oplossing terwijl Microsoft probeert het probleem met de site-eigenaar op te lossen.<br><br>Als u dit beleid instelt op 'FullMode', wordt de volledige nettolading gedownload van de Experimenteer- en Configuratieservice. Dit omvat zowel de nettoladingen voor experimenten als configuratie.<br><br>Als u dit beleid instelt op 'ConfigurationsOnlyMode', wordt alleen de nettolading voor configuratie gedownload.<br><br>Als u dit beleid instelt op 'RestrictedMode', wordt de communicatie met de Experimenteer- en Configuratieservice volledig gestopt. Microsoft raadt deze instelling niet aan.<br><br>Als u dit beleid niet configureert op een beheerd apparaat, is het gedrag op bèta- en stabiele kanalen hetzelfde als bij 'ConfigurationsOnlyMode'. Op Canary- en Dev-kanalen is het gedrag hetzelfde als bij 'FullMode'.<br><br>Als u dit beleid niet configureert op een niet-beheerd apparaat, is het gedrag hetzelfde als bij 'FullMode'.<br><br>Toewijzing van beleidsopties:<br><br>* FullMode (2) = Configuraties en experimenten ophalen<br><br>* ConfigurationsOnlyMode (1) = Alleen configuraties ophalen<br><br>* RestrictedMode (0) = Communicatie met de Experimenteer- en Configuratieservice uitschakelen<br><br>Gebruik de voorgaande informatie bij het configureren van dit beleid.
+
+  <h5>Ondersteunde functies:</h5>
+  <ul>
+  <li>
+      Kan verplicht zijn:
+       Ja
+  </li>
+  <li>
+      Kan worden aangeraden:
+       Nee
+  </li>
+  <li>
+      Dynamische beleidsvernieuwing:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Gegevenstype:</h5>
+  <ul><li>Geheel getal</li></ul>
+
+
+  
+  <h5>Windows-informatie en -instellingen</h5>
+  <h6>Info over groepsbeleid (ADMX)</h6>
+  <ul>
+  <li>Unieke GP-naam: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP-naam: Communicatie met de Experimenteer- en Configuratieservice beheren</li>
+  <li>GP-pad (Verplicht):
+    
+        Beheersjablonen/Microsoft Edge WebView2/
+    </li>
+  <li>GP-pad (Aanbevolen):
+    N.v.t.</li>
+  <li>GP ADMX-bestandsnaam: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinstellingen</h6>
+  <ul>
+  <li>Pad (Verplicht):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Pad (Aanbevolen):
+    N.v.t.</li>
+  <li>Waardenaam:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Waardetype:
+    REG_DWORD</li>
+  </ul>
+  <h6>Voorbeeldwaarde:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---beleid">Terug naar boven</a>
+
+
+
+<h2>Zie ook</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Microsoft Edge configureren</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Openingspagina voor Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog over Microsoft Beveiliging-basislijnen</a></li>
+</ul>
+
+</body>
+</html>

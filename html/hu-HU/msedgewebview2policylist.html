@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-házirendek"></a>
+<h1>Microsoft Edge WebView2 – házirendek</h1>
+A Microsoft Edge WebView2 legújabb verziója az alábbi házirendeket tartalmazza. Ezekkel a házirendekkel konfigurálhatja, hogy a Microsoft Edge WebView2 hogyan fusson a szervezeten belül.
+
+Ha a Microsoft Edge WebView2 frissítésének módját és idejét szabályozó további házirendekről szeretne tájékozódni, tekintse meg a következőt: <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">A Microsoft Edge frissítési házirendjének hivatkozása</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>MEGJEGYZÉS</p>
+<p>Ez a cikk a Microsoft Edge 87-es vagy újabb verziójára vonatkozik.</p>
+</div>
+
+<h2>Elérhető házirendek</h2>
+Ezek a táblázatok a Microsoft Edge WebView2 jelen kiadásában elérhető csoportházirendeket tartalmazzák. A táblázat hivatkozásain keresztül megtekintheti az egyes házirendek részletes leírását.
+
+<table>
+
+<tr><td><a href="#Betöltő felülbírálási beállításai">Betöltő felülbírálási beállításai</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Betöltő felülbírálási beállításai"><a href="#Betöltő felülbírálási beállításai-policies"><i>Betöltő felülbírálási beállításai</i></a></a>
+    <table>
+      <tr><th>Házirend neve</th><th>Felirat</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>A böngésző végrehajtható fájljait tartalmazó mappa helyének konfigurálása</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>A kiadási csatorna keresési sorrendjének beállítása</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Házirend neve</th><th>Felirat</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Kommunikáció szabályozása a Kísérletezési és konfigurációs szolgáltatással</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Betöltő felülbírálási beállításai-policies"></a>Betöltő felülbírálási beállításai policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-házirendek">Vissza az elejére</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>A böngésző végrehajtható fájljait tartalmazó mappa helyének konfigurálása</h4>
+  
+  
+  <h5>Támogatott verziók:</h5>
+  <ul><li>Windows platformon, 87 vagy újabb verziótól</li></ul>
+
+  <h5>Leírás</h5>
+  Ez a házirend konfigurálja a WebView2-alkalmazásokban a megadott elérési úton található WebView2 Runtime használatát. A mappának a következő fájlokat kell tartalmaznia: msedgewebview2.exe, msedge.dll stb.<br><br>A mappa elérési út értékének beállításához adja meg az értéknevet és az értékpárt. Az értéknév az alkalmazás felhasználói modellazonosítója vagy a végrehajtható fájl neve legyen. Adja meg a "*" helyettesítő karaktert értéknévként, ha az összes alkalmazásra alkalmazni szeretné.
+
+  <h5>Támogatott szolgáltatások:</h5>
+  <ul>
+  <li>
+      Kötelező lehet:
+       Igen
+  </li>
+  <li>
+      Lehet ajánlott:
+       Nem
+  </li>
+  <li>
+      Dinamikus házirendfrissítés:
+      
+      Igen
+      
+  </li>
+  </ul>
+
+  <h5>Adattípus:</h5>
+  <ul><li>Sztringlista</li></ul>
+
+
+  
+  <h5>A Windows adatai és beállításai</h5>
+  <h6>Csoportházirend (ADMX) adatai</h6>
+  <ul>
+  <li>Csoportházirend egyedi neve: BrowserExecutableFolder</li>
+  <li>Csoportházirend neve: A böngésző végrehajtható fájljait tartalmazó mappa helyének konfigurálása</li>
+  <li>Csoportházirend elérési útja (Kötelező):
+    
+        Felügyeleti sablonok/Microsoft Edge WebView2/Betöltő felülbírálási beállításai
+    </li>
+  <li>Csoportházirend elérési útja (Ajánlott):
+    –</li>
+  <li>Csoportházirend ADMX-fájljának neve: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>A Windows beállításjegyzékének beállításai</h6>
+  <ul>
+  <li>Elérési út (Kötelező):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Elérési út (Ajánlott):
+    –</li>
+  <li>Érték neve:
+    REG_SZ-lista
+    </li>
+  <li>Érték típusa:
+    REG_SZ-lista
+    </li>
+  </ul>
+  <h6>Mintaérték:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-házirendek">Vissza az elejére</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>A kiadási csatorna keresési sorrendjének beállítása</h4>
+  
+  
+  <h5>Támogatott verziók:</h5>
+  <ul><li>Windows platformon, 87 vagy újabb verziótól</li></ul>
+
+  <h5>Leírás</h5>
+  Az alapértelmezett csatornakeresési sorrend a WebView2 Runtime, Beta, dev és Canary.<br><br>Az alapértelmezett keresési sorrend megfordításához állítsa ezt a házirendet 1 értékre.<br><br>A kiadási csatorna beállítás értékének megadásához adjon meg egy értéknevet és egy értékpárt.  Az értéknév az alkalmazás felhasználói modellazonosítója vagy a végrehajtható fájl neve legyen. Adja meg a "*" helyettesítő karaktert értéknévként, ha az összes alkalmazásra alkalmazni szeretné.
+
+  <h5>Támogatott szolgáltatások:</h5>
+  <ul>
+  <li>
+      Kötelező lehet:
+       Igen
+  </li>
+  <li>
+      Lehet ajánlott:
+       Nem
+  </li>
+  <li>
+      Dinamikus házirendfrissítés:
+      
+      Igen
+      
+  </li>
+  </ul>
+
+  <h5>Adattípus:</h5>
+  <ul><li>Sztringlista</li></ul>
+
+
+  
+  <h5>A Windows adatai és beállításai</h5>
+  <h6>Csoportházirend (ADMX) adatai</h6>
+  <ul>
+  <li>Csoportházirend egyedi neve: ReleaseChannelPreference</li>
+  <li>Csoportházirend neve: A kiadási csatorna keresési sorrendjének beállítása</li>
+  <li>Csoportházirend elérési útja (Kötelező):
+    
+        Felügyeleti sablonok/Microsoft Edge WebView2/Betöltő felülbírálási beállításai
+    </li>
+  <li>Csoportházirend elérési útja (Ajánlott):
+    –</li>
+  <li>Csoportházirend ADMX-fájljának neve: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>A Windows beállításjegyzékének beállításai</h6>
+  <ul>
+  <li>Elérési út (Kötelező):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Elérési út (Ajánlott):
+    –</li>
+  <li>Érték neve:
+    REG_SZ-lista
+    </li>
+  <li>Érték típusa:
+    REG_SZ-lista
+    </li>
+  </ul>
+  <h6>Mintaérték:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-házirendek">Vissza az elejére</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-házirendek">Vissza az elejére</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Kommunikáció szabályozása a Kísérletezési és konfigurációs szolgáltatással</h4>
+  
+  
+  <h5>Támogatott verziók:</h5>
+  <ul><li>Windows platformon, 97 vagy újabb verziótól</li></ul>
+
+  <h5>Leírás</h5>
+  A Kísérletezési és konfigurációs szolgáltatása a kísérletezési és konfigurációs adattartalom üzembe helyezésére szolgál.<br><br>A kísérletezési adattartalom olyan, a fejlesztés korai fázisában lévő funkciók listájából áll, amelyeket a Microsoft tesztelésre és visszajelzés küldésére engedélyez.<br><br>A konfigurációs adattartalom olyan beállítások listájából áll, amelyeket a Microsoft üzembe kíván helyezni az alkalmazásban a felhasználói élmény optimalizálása érdekében.<br><br>A konfigurációs adattartalom tartalmazhat egy listát is a bizonyos tartományokon kompatibilitási okokból elvégzendő műveletekről. A böngésző például felülbírálhatja a böngészőazonosító sztringet egy webhelyen, ha az adott webhely hibás. Ezen műveletek mindegyike átmeneti céllal lett meghatározva, amíg a Microsoft megpróbálja megoldani a problémát a webhely tulajdonosának bevonásával.<br><br>Ha a házirendben a „FullMode” módot állítja be, a rendszer a teljes adattartalmat letölti a Kísérletezési és konfigurációs szolgáltatásból. Ez magában foglalja a kísérletezési és a konfigurációs adattartalmat is.<br><br>Ha a házirendben a „ConfigurationsOnlyMode” módot állítja be, akkor csak a konfigurációs adattartalom kézbesítése történik meg.<br><br>Ha a házirendben a „RestrictedMode” módot állítja be, a Kísérletezési és konfigurációs szolgáltatással folytatott kommunikáció teljesen leáll. A Microsoft nem javasolja ezt a beállítást.<br><br>Ha nem konfigurálja ezt a házirendet egy felügyelt eszközökön, a viselkedés ugyanaz, mint a „ConfigurationsOnlyMode” mód esetén. A Canary és Dev csatornákon a viselkedés ugyanaz, mint a „FullMode“ mód esetén.<br><br>Ha nem konfigurálja ezt a házirendet a nem felügyelt eszközökön, a viselkedés ugyanaz, mint a „FullMode” mód esetén.<br><br>Házirendbeállítások leképezése:<br><br>* FullMode (2) = Konfigurációk és kísérletek beolvasása<br><br>* ConfigurationsOnlyMode (1) = Csak a konfigurációk beolvasása<br><br>* RestrictedMode (0) = Kommunikáció letiltása a Kísérletezési és konfigurációs szolgáltatással<br><br>Használja az előző információt a házirend konfigurálásakor.
+
+  <h5>Támogatott szolgáltatások:</h5>
+  <ul>
+  <li>
+      Kötelező lehet:
+       Igen
+  </li>
+  <li>
+      Lehet ajánlott:
+       Nem
+  </li>
+  <li>
+      Dinamikus házirendfrissítés:
+      
+      Igen
+      
+  </li>
+  </ul>
+
+  <h5>Adattípus:</h5>
+  <ul><li>Egész szám</li></ul>
+
+
+  
+  <h5>A Windows adatai és beállításai</h5>
+  <h6>Csoportházirend (ADMX) adatai</h6>
+  <ul>
+  <li>Csoportházirend egyedi neve: ExperimentationAndConfigurationServiceControl</li>
+  <li>Csoportházirend neve: Kommunikáció szabályozása a Kísérletezési és konfigurációs szolgáltatással</li>
+  <li>Csoportházirend elérési útja (Kötelező):
+    
+        Felügyeleti sablonok/Microsoft Edge WebView2/
+    </li>
+  <li>Csoportházirend elérési útja (Ajánlott):
+    –</li>
+  <li>Csoportházirend ADMX-fájljának neve: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>A Windows beállításjegyzékének beállításai</h6>
+  <ul>
+  <li>Elérési út (Kötelező):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Elérési út (Ajánlott):
+    –</li>
+  <li>Érték neve:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Érték típusa:
+    REG_DWORD</li>
+  </ul>
+  <h6>Mintaérték:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-házirendek">Vissza az elejére</a>
+
+
+
+<h2>Egyebek</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">A Microsoft Edge konfigurálása</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">A Microsoft Edge vállalati kezdőlapja</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Security Baselines blog</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2:-directivas"></a>
+<h1>Microsoft Edge WebView2: directivas</h1>
+La versión más reciente de Microsoft Edge WebView2 incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge WebView2 en su organización.
+
+Para obtener información sobre un conjunto adicional de directivas que se utilizan para controlar cómo y cuándo se actualiza Microsoft Edge WebView2, consulte <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Referencia de la directiva de Microsoft Edge Update</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>NOTA</p>
+<p>Este artículo se aplica a Microsoft Edge versión 87 o posterior.</p>
+</div>
+
+<h2>Directivas disponibles</h2>
+En estas tablas se enumeran todas las directivas de grupo disponibles en esta versión de Microsoft Edge WebView2. Use los vínculos de la tabla para obtener más información sobre directivas específicas.
+
+<table>
+
+<tr><td><a href="#Configuración de invalidación de cargador">Configuración de invalidación de cargador</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Configuración de invalidación de cargador"><a href="#Configuración de invalidación de cargador-policies"><i>Configuración de invalidación de cargador</i></a></a>
+    <table>
+      <tr><th>Nombre de directiva</th><th>Título</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Configurar la ubicación de la carpeta ejecutable del explorador</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Establecer las preferencias de orden de búsqueda por canales de lanzamiento</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Nombre de directiva</th><th>Título</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Controlar la comunicación con el servicio de experimentación y configuración</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Configuración de invalidación de cargador-policies"></a>Configuración de invalidación de cargador policies</h2>
+  <br /><a href="#microsoft-edge-webview2:-directivas">Volver al principio</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Configurar la ubicación de la carpeta ejecutable del explorador</h4>
+  
+  
+  <h5>Versiones admitidas:</h5>
+  <ul><li>En Windows desde 87 o posterior</li></ul>
+
+  <h5>Descripción</h5>
+  Esta directiva configura las aplicaciones de WebView2 para usar el tiempo de ejecución WebView2 en la ruta de acceso especificada. La carpeta debe contener los siguientes archivos: msedgewebview2.exe, msedge.dll, etc.<br><br>Para establecer el valor para la ruta de acceso de la carpeta, especifique un nombre de valor y un par de valor. Configure el nombre de valor en el Id. del modelo de usuario de la aplicación o el nombre del archivo ejecutable. Puede usar el carácter comodín "*" como nombre de valor para aplicarlo a todas las aplicaciones.
+
+  <h5>Características admitidas:</h5>
+  <ul>
+  <li>
+      Puede ser obligatorio:
+       Sí
+  </li>
+  <li>
+      Se puede recomendar:
+       No
+  </li>
+  <li>
+      Actualización de directiva dinámica:
+      
+      Sí
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de datos:</h5>
+  <ul><li>Lista de cadenas</li></ul>
+
+
+  
+  <h5>Información y configuración de Windows</h5>
+  <h6>Información de la directiva de grupos (ADMX)</h6>
+  <ul>
+  <li>Nombre único de la directiva de grupos: BrowserExecutableFolder</li>
+  <li>Nombre de la directiva de grupos: Configurar la ubicación de la carpeta ejecutable del explorador</li>
+  <li>Ruta de acceso de GP (Obligatorio):
+    
+        Plantillas administrativas/Microsoft Edge WebView2/Configuración de invalidación de cargador
+    </li>
+  <li>Ruta de acceso de GP (Recomendada):
+    N/D</li>
+  <li>Nombre del archivo ADMX de GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configuración del registro de Windows</h6>
+  <ul>
+  <li>Ruta de acceso (Obligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Ruta de acceso (Recomendada):
+    N/D</li>
+  <li>Nombre del valor:
+    lista de REG_SZ
+    </li>
+  <li>Tipo de valor:
+    lista de REG_SZ
+    </li>
+  </ul>
+  <h6>Valor de ejemplo:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2:-directivas">Volver al principio</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Establecer las preferencias de orden de búsqueda por canales de lanzamiento</h4>
+  
+  
+  <h5>Versiones admitidas:</h5>
+  <ul><li>En Windows desde 87 o posterior</li></ul>
+
+  <h5>Descripción</h5>
+  El orden de búsqueda por canales predeterminado es WebView2 Runtime, Beta, Dev y Canary.<br><br>Para invertir el orden de búsqueda predeterminado, establezca esta directiva en 1.<br><br>Para establecer el valor de las preferencias de canales de lanzamiento, especifique un nombre de valor y un par de valor. Configure el nombre de valor en el Id. del modelo de usuario de la aplicación o el nombre del archivo ejecutable. Puede usar el carácter comodín "*" como nombre de valor para aplicar a todas las aplicaciones.
+
+  <h5>Características admitidas:</h5>
+  <ul>
+  <li>
+      Puede ser obligatorio:
+       Sí
+  </li>
+  <li>
+      Se puede recomendar:
+       No
+  </li>
+  <li>
+      Actualización de directiva dinámica:
+      
+      Sí
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de datos:</h5>
+  <ul><li>Lista de cadenas</li></ul>
+
+
+  
+  <h5>Información y configuración de Windows</h5>
+  <h6>Información de la directiva de grupos (ADMX)</h6>
+  <ul>
+  <li>Nombre único de la directiva de grupos: ReleaseChannelPreference</li>
+  <li>Nombre de la directiva de grupos: Establecer las preferencias de orden de búsqueda por canales de lanzamiento</li>
+  <li>Ruta de acceso de GP (Obligatorio):
+    
+        Plantillas administrativas/Microsoft Edge WebView2/Configuración de invalidación de cargador
+    </li>
+  <li>Ruta de acceso de GP (Recomendada):
+    N/D</li>
+  <li>Nombre del archivo ADMX de GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configuración del registro de Windows</h6>
+  <ul>
+  <li>Ruta de acceso (Obligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Ruta de acceso (Recomendada):
+    N/D</li>
+  <li>Nombre del valor:
+    lista de REG_SZ
+    </li>
+  <li>Tipo de valor:
+    lista de REG_SZ
+    </li>
+  </ul>
+  <h6>Valor de ejemplo:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2:-directivas">Volver al principio</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2:-directivas">Volver al principio</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Controlar la comunicación con el servicio de experimentación y configuración</h4>
+  
+  
+  <h5>Versiones admitidas:</h5>
+  <ul><li>En Windows desde 97 o posterior</li></ul>
+
+  <h5>Descripción</h5>
+  El servicio de experimentación y configuración se usa para implementar cargas de experimentación y configuración en el cliente.<br><br>La carga de experimentación consta de una lista de características de desarrollo temprano que Microsoft está habilitando para pruebas y comentarios.<br><br>La carga de configuración consta de una lista de opciones recomendadas que Microsoft quiere implementar para optimizar la experiencia del usuario.<br><br>La carga de configuración también puede contener una lista de acciones que se deben realizar en determinados dominios por motivos de compatibilidad. Por ejemplo, el explorador puede invalidar la cadena del agente de usuario en un sitio web si ese sitio web no funciona. Todas estas acciones son temporales hasta que Microsoft resuelva el problema con el propietario del sitio.<br><br>Si establece esta directiva en "FullMode", la carga completa se descargará del servicio de experimentación y configuración. Esto incluye las cargas de experimentación y configuración.<br><br>Si establece esta directiva en "ConfigurationsOnlyMode", solo se descargará la carga de configuración.<br><br>Si establece esta directiva en "RestrictedMode", la comunicación con el servicio de experimentación y configuración se detiene por completo. Microsoft no recomienda esta configuración.<br><br>Si no configura esta directiva en un dispositivo administrado, el comportamiento en los canales Beta y Estable será el mismo que el de "ConfigurationsOnlyMode". En los canales Canary y Dev, el comportamiento es el mismo que "FullMode".<br><br>Si no configura esta directiva en un dispositivo no administrado, el comportamiento será el mismo que el de "FullMode".<br><br>Asignación de opciones de directiva:<br><br>* FullMode (2) = Recuperar configuraciones y experimentos<br><br>* ConfigurationsOnlyMode (1) = Recuperar solo configuraciones<br><br>* RestrictedMode (0) = Deshabilitar la comunicación con el servicio de experimentación y configuración<br><br>Usa la información anterior al configurar esta directiva.
+
+  <h5>Características admitidas:</h5>
+  <ul>
+  <li>
+      Puede ser obligatorio:
+       Sí
+  </li>
+  <li>
+      Se puede recomendar:
+       No
+  </li>
+  <li>
+      Actualización de directiva dinámica:
+      
+      Sí
+      
+  </li>
+  </ul>
+
+  <h5>Tipo de datos:</h5>
+  <ul><li>Entero</li></ul>
+
+
+  
+  <h5>Información y configuración de Windows</h5>
+  <h6>Información de la directiva de grupos (ADMX)</h6>
+  <ul>
+  <li>Nombre único de la directiva de grupos: ExperimentationAndConfigurationServiceControl</li>
+  <li>Nombre de la directiva de grupos: Controlar la comunicación con el servicio de experimentación y configuración</li>
+  <li>Ruta de acceso de GP (Obligatorio):
+    
+        Plantillas administrativas/Microsoft Edge WebView2/
+    </li>
+  <li>Ruta de acceso de GP (Recomendada):
+    N/D</li>
+  <li>Nombre del archivo ADMX de GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Configuración del registro de Windows</h6>
+  <ul>
+  <li>Ruta de acceso (Obligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Ruta de acceso (Recomendada):
+    N/D</li>
+  <li>Nombre del valor:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Tipo de valor:
+    REG_DWORD</li>
+  </ul>
+  <h6>Valor de ejemplo:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2:-directivas">Volver al principio</a>
+
+
+
+<h2>Vea también</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Configurando Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Página de aterrizaje de Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog de bases de referencia de seguridad de Microsoft</a></li>
+</ul>
+
+</body>
+</html>

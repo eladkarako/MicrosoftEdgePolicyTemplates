@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---ポリシー"></a>
+<h1>Microsoft Edge WebView2 - ポリシー</h1>
+最新バージョンの Microsoft Edge WebView2 には、次のポリシーが含まれています。これらのポリシーを使用して、組織での Microsoft Edge WebView2 の実行方法を構成できます。
+
+Microsoft Edge WebView2 の更新方法と更新タイミングの制御に使用される他のポリシーについては、<a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge 更新ポリシーのリファレンス</a> を参照してください。
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>注意</p>
+<p>この記事は、Microsoft Edge バージョン 87 以降に適用されます。</p>
+</div>
+
+<h2>利用可能なポリシー</h2>
+これらの表には、Microsoft Edge WebView2 のこのリリースで利用できるグループ ポリシーがすべて示されています。特定のポリシーの詳細を確認するには、表内のリンクを使用してください。
+
+<table>
+
+<tr><td><a href="#ローダー オーバーライドの設定">ローダー オーバーライドの設定</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="ローダー オーバーライドの設定"><a href="#ローダー オーバーライドの設定-policies"><i>ローダー オーバーライドの設定</i></a></a>
+    <table>
+      <tr><th>ポリシー名</th><th>キャプション</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>ブラウザーの実行可能フォルダーの場所を構成する</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>リリース チャネルの検索順序の設定</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>ポリシー名</th><th>キャプション</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>実験および構成サービスとの通信を制御する</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="ローダー オーバーライドの設定-policies"></a>ローダー オーバーライドの設定 policies</h2>
+  <br /><a href="#microsoft-edge-webview2---ポリシー">トップに戻る</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>ブラウザーの実行可能フォルダーの場所を構成する</h4>
+  
+  
+  <h5>サポートされているバージョン:</h5>
+  <ul><li>Windows 以降の 87</li></ul>
+
+  <h5>説明</h5>
+  このポリシーでは、指定されたパスで WebView2 ランタイムを使用するように WebView2 アプリケーションを構成します。フォルダーには、msedgewebview2.exe や msedge.dll といったファイルが含まれている必要があります。<br><br>フォルダーパスの値を設定するには、値の名前と値のペアを指定します。値の名前は、アプリケーション ユーザー モデル ID または実行可能ファイル名に設定します。すべてのアプリケーションに適用できる値の名前として、"*" のワイルドカードを使用できます。
+
+  <h5>サポートされている機能:</h5>
+  <ul>
+  <li>
+      必須になる場合があります:
+       はい
+  </li>
+  <li>
+      推奨される場合があります:
+       いいえ
+  </li>
+  <li>
+      動的ポリシーの更新:
+      
+      はい
+      
+  </li>
+  </ul>
+
+  <h5>データ型:</h5>
+  <ul><li>文字列の一覧</li></ul>
+
+
+  
+  <h5>Windows の情報と設定</h5>
+  <h6>グループ ポリシー (ADMX) 情報</h6>
+  <ul>
+  <li>GP 固有の名前: BrowserExecutableFolder</li>
+  <li>GP の名前: ブラウザーの実行可能フォルダーの場所を構成する</li>
+  <li>GP パス (必須):
+    
+        管理用テンプレート/Microsoft Edge WebView2/ローダー オーバーライドの設定
+    </li>
+  <li>GP パス (おすすめ):
+    N/A</li>
+  <li>GP ADMX ファイル名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows レジストリの設定</h6>
+  <ul>
+  <li>パス (必須):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>パス (おすすめ):
+    N/A</li>
+  <li>値の名前:
+    REG_SZ の一覧
+    </li>
+  <li>値の種類:
+    REG_SZ の一覧
+    </li>
+  </ul>
+  <h6>サンプル値:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---ポリシー">トップに戻る</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>リリース チャネルの検索順序の設定</h4>
+  
+  
+  <h5>サポートされているバージョン:</h5>
+  <ul><li>Windows 以降の 87</li></ul>
+
+  <h5>説明</h5>
+  チャネル検索の既定の順序は、WebView2 ランタイム、ベータ、開発、およびカナリアです。<br><br>既定の検索順序を反転するには、このポリシーを 1 に設定します。<br><br> リリース チャネルの基本設定の値を設定するには、値の名前と値のペアを指定します。値の名前は、アプリケーション ユーザー モデル ID または実行可能ファイル名に設定します。すべてのアプリケーションに適用できる値の名前として、"*" のワイルドカードを使用できます。
+
+  <h5>サポートされている機能:</h5>
+  <ul>
+  <li>
+      必須になる場合があります:
+       はい
+  </li>
+  <li>
+      推奨される場合があります:
+       いいえ
+  </li>
+  <li>
+      動的ポリシーの更新:
+      
+      はい
+      
+  </li>
+  </ul>
+
+  <h5>データ型:</h5>
+  <ul><li>文字列の一覧</li></ul>
+
+
+  
+  <h5>Windows の情報と設定</h5>
+  <h6>グループ ポリシー (ADMX) 情報</h6>
+  <ul>
+  <li>GP 固有の名前: ReleaseChannelPreference</li>
+  <li>GP の名前: リリース チャネルの検索順序の設定</li>
+  <li>GP パス (必須):
+    
+        管理用テンプレート/Microsoft Edge WebView2/ローダー オーバーライドの設定
+    </li>
+  <li>GP パス (おすすめ):
+    N/A</li>
+  <li>GP ADMX ファイル名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows レジストリの設定</h6>
+  <ul>
+  <li>パス (必須):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>パス (おすすめ):
+    N/A</li>
+  <li>値の名前:
+    REG_SZ の一覧
+    </li>
+  <li>値の種類:
+    REG_SZ の一覧
+    </li>
+  </ul>
+  <h6>サンプル値:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---ポリシー">トップに戻る</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---ポリシー">トップに戻る</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>実験および構成サービスとの通信を制御する</h4>
+  
+  
+  <h5>サポートされているバージョン:</h5>
+  <ul><li>Windows 以降の 97</li></ul>
+
+  <h5>説明</h5>
+  実験および構成サービスを使用して、実験および構成ペイロードをクライアントにデプロイします。<br><br>実験ペイロードは、Microsoft がテストおよびフィードバックを有効にしている初期開発機能の一覧で構成されています。<br><br>構成ペイロードは、ユーザー エクスペリエンスを最適化するために Microsoft がデプロイする推奨設定の一覧で構成されています。<br><br>構成ペイロードには、互換性の理由で特定のドメインで実行されるアクションの一覧が含まれている場合があります。たとえば、Web サイトが破損した場合、ブラウザーは Web サイト上のユーザー エージェント文字列を上書きする場合があります。こうした各アクションは一時的なものであり、Microsoft ではサイト所有者に関連する問題の解決を試行します。<br><br>このポリシーを 'FullMode' に設定した場合、ペイロード全体は実験および構成サービスからダウンロードされます。これには、実験ペイロードと構成ペイロードの両方が含まれます。<br><br>このポリシーを 'ConfigurationsOnlyMode' に設定した場合、構成ペイロードのみがダウンロードされます。<br><br>このポリシーを 'RestrictedMode' に設定した場合、実験および構成サービスとの通信は完全に停止します。Microsoft はこの設定を推奨していません。<br><br>マネージド デバイスでこのポリシーを構成しなかった場合、ベータ版と安定版のチャネルでの動作は 'ConfigurationsOnlyMode' と同じになります。Canary と Dev チャネルでは、動作は 'FullMode' と同じになります。<br><br>アンマネージド デバイスでこのポリシーを構成しなかった場合、動作は 'FullMode' と同じになります。<br><br>ポリシー オプションのマッピング:<br><br>* FullMode (2) = 構成と実験の取得<br><br>* ConfigurationsOnlyMode (1) = 構成のみを取得する<br><br>* RestrictedMode (0) = 実験および構成サービスとの通信を無効にする<br><br>このポリシーを構成するときは、前述の情報を使用してください。
+
+  <h5>サポートされている機能:</h5>
+  <ul>
+  <li>
+      必須になる場合があります:
+       はい
+  </li>
+  <li>
+      推奨される場合があります:
+       いいえ
+  </li>
+  <li>
+      動的ポリシーの更新:
+      
+      はい
+      
+  </li>
+  </ul>
+
+  <h5>データ型:</h5>
+  <ul><li>整数</li></ul>
+
+
+  
+  <h5>Windows の情報と設定</h5>
+  <h6>グループ ポリシー (ADMX) 情報</h6>
+  <ul>
+  <li>GP 固有の名前: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP の名前: 実験および構成サービスとの通信を制御する</li>
+  <li>GP パス (必須):
+    
+        管理用テンプレート/Microsoft Edge WebView2/
+    </li>
+  <li>GP パス (おすすめ):
+    N/A</li>
+  <li>GP ADMX ファイル名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows レジストリの設定</h6>
+  <ul>
+  <li>パス (必須):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>パス (おすすめ):
+    N/A</li>
+  <li>値の名前:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>値の種類:
+    REG_DWORD</li>
+  </ul>
+  <h6>サンプル値:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---ポリシー">トップに戻る</a>
+
+
+
+<h2>関連項目</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Microsoft Edge の構成</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge Enterprise ランディング ページ</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Security ベースライン ブログ</a></li>
+</ul>
+
+</body>
+</html>

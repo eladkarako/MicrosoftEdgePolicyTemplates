@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---criteri"></a>
+<h1>Microsoft Edge WebView2 - criteri</h1>
+L'ultima versione di Microsoft Edge WebView2 include i criteri seguenti. Puoi usare questi criteri per configurare il modo in cui Microsoft Edge WebView2 viene eseguito nell'organizzazione.
+
+Per informazioni sul set aggiuntivo di criteri usati per controllare le modalità e i tempi di aggiornamento di Microsoft Edge WebView2, vedi <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Riferimento ai criteri di aggiornamento di Microsoft Edge</a>
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>NOTA</p>
+<p>Questo articolo riguarda Microsoft Edge versione 87 o successiva.</p>
+</div>
+
+<h2>Criteri disponibili</h2>
+Queste tabelle elencano tutti i criteri di gruppo disponibili in questa versione di Microsoft Edge WebView2. Usa i collegamenti nella tabella per ottenere altri dettagli sui criteri specifici.
+
+<table>
+
+<tr><td><a href="#Impostazioni override caricatore">Impostazioni override caricatore</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Impostazioni override caricatore"><a href="#Impostazioni override caricatore-policies"><i>Impostazioni override caricatore</i></a></a>
+    <table>
+      <tr><th>Nome criteri</th><th>Sottotitolo</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Configura il percorso della cartella eseguibile del browser</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Imposta le preferenze dell'ordine di ricerca del canale di rilascio</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Nome criteri</th><th>Sottotitolo</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Controlla le comunicazioni con il Servizio di sperimentazione e configurazione</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Impostazioni override caricatore-policies"></a>Impostazioni override caricatore policies</h2>
+  <br /><a href="#microsoft-edge-webview2---criteri">Torna all'inizio</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Configura il percorso della cartella eseguibile del browser</h4>
+  
+  
+  <h5>Versioni supportate:</h5>
+  <ul><li>Su Windows dal 87 o successiva</li></ul>
+
+  <h5>Descrizione</h5>
+  Questo criterio consente di configurare le applicazioni WebView2 per utilizzare il runtime WebView2 nel percorso specificato. La cartella deve contenere i file seguenti: msedgewebview2.exe, msedge.dll e così via.<br><br>Per impostare il valore per il percorso della cartella, specificare un nome del valore e una coppia di valori. Imposta il nome del valore con l'ID modello utente applicazione o il nome del file eseguibile. Puoi utilizzare il carattere jolly "*" come nome valore da applicare a tutte le applicazioni.
+
+  <h5>Funzionalità supportate:</h5>
+  <ul>
+  <li>
+      Può essere obbligatorio:
+       Sì
+  </li>
+  <li>
+      Può essere consigliato:
+       No
+  </li>
+  <li>
+      Aggiornamento criteri dinamici:
+      
+      Sì
+      
+  </li>
+  </ul>
+
+  <h5>Tipo di dati:</h5>
+  <ul><li>Elenco di stringhe</li></ul>
+
+
+  
+  <h5>Informazioni e impostazioni di Windows</h5>
+  <h6>Info su Criteri di gruppo (ADMX)</h6>
+  <ul>
+  <li>Nome univoco GP: BrowserExecutableFolder</li>
+  <li>Nome GP: Configura il percorso della cartella eseguibile del browser</li>
+  <li>Percorso GP (Obbligatorio):
+    
+        Modelli amministrativi/Microsoft Edge WebView2/Impostazioni override caricatore
+    </li>
+  <li>Percorso GP (Consigliati):
+    N/D</li>
+  <li>Nome file ADMX GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Impostazioni Registro di sistema di Windows</h6>
+  <ul>
+  <li>Percorso (Obbligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Percorso (Consigliati):
+    N/D</li>
+  <li>Nome valore:
+    elenco di REG_SZ
+    </li>
+  <li>Tipo di valore:
+    elenco di REG_SZ
+    </li>
+  </ul>
+  <h6>Valore di esempio:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---criteri">Torna all'inizio</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Imposta le preferenze dell'ordine di ricerca del canale di rilascio</h4>
+  
+  
+  <h5>Versioni supportate:</h5>
+  <ul><li>Su Windows dal 87 o successiva</li></ul>
+
+  <h5>Descrizione</h5>
+  L'ordine di ricerca del canale predefinito è WebView2 Runtime, Beta, Dev e Canary.<br><br>Per invertire l'ordine di ricerca predefinito, imposta questo criterio su 1.<br><br>Per impostare il valore della preferenza per il canale di rilascio, specifica un nome e una coppia di valori. Imposta il nome del valore con l'ID modello utente applicazione o sul nome del file eseguibile. Puoi usare il carattere jolly "*" come nome del valore da applicare a tutte le applicazioni.
+
+  <h5>Funzionalità supportate:</h5>
+  <ul>
+  <li>
+      Può essere obbligatorio:
+       Sì
+  </li>
+  <li>
+      Può essere consigliato:
+       No
+  </li>
+  <li>
+      Aggiornamento criteri dinamici:
+      
+      Sì
+      
+  </li>
+  </ul>
+
+  <h5>Tipo di dati:</h5>
+  <ul><li>Elenco di stringhe</li></ul>
+
+
+  
+  <h5>Informazioni e impostazioni di Windows</h5>
+  <h6>Info su Criteri di gruppo (ADMX)</h6>
+  <ul>
+  <li>Nome univoco GP: ReleaseChannelPreference</li>
+  <li>Nome GP: Imposta le preferenze dell'ordine di ricerca del canale di rilascio</li>
+  <li>Percorso GP (Obbligatorio):
+    
+        Modelli amministrativi/Microsoft Edge WebView2/Impostazioni override caricatore
+    </li>
+  <li>Percorso GP (Consigliati):
+    N/D</li>
+  <li>Nome file ADMX GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Impostazioni Registro di sistema di Windows</h6>
+  <ul>
+  <li>Percorso (Obbligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Percorso (Consigliati):
+    N/D</li>
+  <li>Nome valore:
+    elenco di REG_SZ
+    </li>
+  <li>Tipo di valore:
+    elenco di REG_SZ
+    </li>
+  </ul>
+  <h6>Valore di esempio:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---criteri">Torna all'inizio</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---criteri">Torna all'inizio</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Controlla le comunicazioni con il Servizio di sperimentazione e configurazione</h4>
+  
+  
+  <h5>Versioni supportate:</h5>
+  <ul><li>Su Windows dal 97 o successiva</li></ul>
+
+  <h5>Descrizione</h5>
+  Il Servizio di sperimentazione e configurazione viene utilizzato per distribuire il payload di sperimentazione e configurazione al cliente.<br><br>     Il payload di sperimentazione è costituito dall'elenco delle prime funzionalità di sviluppo che Microsoft abilita per il testing e il feedback.<br><br>     Il payload di configurazione è costituito dall'elenco delle impostazioni che Microsoft desidera distribuire in per ottimizzare l'esperienza utente.<br><br>Ad esempio, il payload di configurazione potrebbe anche contenere un elenco di azioni da intraprendere su alcuni domini per motivi di compatibilità. Ad esempio, il browser potrebbe ignorare la stringa Agente utente su un sito Web se tale sito Web è danneggiato. Ognuna di queste azioni è destinata ad essere temporanea mentre Microsoft tenta di risolvere il problema con il proprietario del sito.<br><br>     Se imposti questi criteri sulla modalità "Modalità estesa", viene scaricato il payload completo dal Servizio di sperimentazione e configurazione, ossia il payload di entrambe sperimentazione e configurazione.<br><br>     Se imposti questi criteri sulla modalità "Solo configurazioni", viene scaricato solo il payload di configurazione.<br><br>     Se imposti questi criteri su "Modalità con restrizioni", le comunicazioni con il Servizio di sperimentazione e configurazione vengono completamente interrotte. Microsoft non consiglia questa impostazione.<br><br>     Se non configuri questi criteri in un dispositivo gestito, il comportamento nei canali Beta e Stabile è lo stesso di “ConfigurationsOnlyMode”. Nei canali Canary e Dev il comportamento è lo stesso di “FullMode”.<br><br>     Se non configuri questi criteri, il comportamento è quello di “FullMode”.<br><br>Mappatura opzioni criteri:<br><br>* FullMode (2) = Recupera configurazioni ed esperimenti<br><br>* ConfigurationsOnlyMode (1) = Recupera solo configurazioni<br><br>* RestrictedMode (0) = Disabilita le comunicazioni con il Servizio di sperimentazione e configurazione<br><br>Utilizzare le informazioni precedenti durante la configurazione di questo criterio.
+
+  <h5>Funzionalità supportate:</h5>
+  <ul>
+  <li>
+      Può essere obbligatorio:
+       Sì
+  </li>
+  <li>
+      Può essere consigliato:
+       No
+  </li>
+  <li>
+      Aggiornamento criteri dinamici:
+      
+      Sì
+      
+  </li>
+  </ul>
+
+  <h5>Tipo di dati:</h5>
+  <ul><li>Numero intero</li></ul>
+
+
+  
+  <h5>Informazioni e impostazioni di Windows</h5>
+  <h6>Info su Criteri di gruppo (ADMX)</h6>
+  <ul>
+  <li>Nome univoco GP: ExperimentationAndConfigurationServiceControl</li>
+  <li>Nome GP: Controlla le comunicazioni con il Servizio di sperimentazione e configurazione</li>
+  <li>Percorso GP (Obbligatorio):
+    
+        Modelli amministrativi/Microsoft Edge WebView2/
+    </li>
+  <li>Percorso GP (Consigliati):
+    N/D</li>
+  <li>Nome file ADMX GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Impostazioni Registro di sistema di Windows</h6>
+  <ul>
+  <li>Percorso (Obbligatorio):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Percorso (Consigliati):
+    N/D</li>
+  <li>Nome valore:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Tipo di valore:
+    REG_DWORD</li>
+  </ul>
+  <h6>Valore di esempio:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---criteri">Torna all'inizio</a>
+
+
+
+<h2>Vedi anche</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Configurazione di Microsoft Edge in corso</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Pagina di destinazione di Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog sulle linee di base di Microsoft Security</a></li>
+</ul>
+
+</body>
+</html>

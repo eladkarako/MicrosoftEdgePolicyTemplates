@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-—-политики"></a>
+<h1>Microsoft Edge WebView2 — политики</h1>
+Последняя версия Microsoft Edge WebView2 включает в себя указанные далее политики. Их можно использовать для настройки работы Microsoft Edge WebView2 в вашей организации.
+
+Чтобы узнать о дополнительных политиках для определения способа и времени обновления Microsoft Edge WebView2, перейдите сюда: <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Ссылка на политику обновления Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>ПРИМЕЧАНИЕ</p>
+<p>Эта статья относится к Microsoft Edge версии 87 или более поздней.</p>
+</div>
+
+<h2>Доступные политики</h2>
+В этих таблицах перечислены все групповые политики, доступные в данном выпуске Microsoft Edge WebView2. Используйте ссылки из таблицы для получения дополнительных сведений о конкретных политиках.
+
+<table>
+
+<tr><td><a href="#Параметры переопределения загрузчика">Параметры переопределения загрузчика</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Параметры переопределения загрузчика"><a href="#Параметры переопределения загрузчика-policies"><i>Параметры переопределения загрузчика</i></a></a>
+    <table>
+      <tr><th>Имя политики</th><th>Заголовок</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Настройка расположения исполняемой папки браузера</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Настройка предпочтений порядка поиска в канале выпуска</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Имя политики</th><th>Заголовок</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Управление связью со службой "Служба расширенной конфигурации"</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Параметры переопределения загрузчика-policies"></a>Параметры переопределения загрузчика policies</h2>
+  <br /><a href="#microsoft-edge-webview2-—-политики">В начало</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Настройка расположения исполняемой папки браузера</h4>
+  
+  
+  <h5>Поддерживаемые версии:</h5>
+  <ul><li>На Windows с 87 или более поздней версии</li></ul>
+
+  <h5>Описание</h5>
+  Эта политика задает приложения WebView2 для использования среды выполнения WebView2 по указанному пути. Папка должна содержать следующие файлы: msedgewebview2.exe, msedge.dll и т. д.<br><br>Чтобы задать значение для пути к папке, укажите имя значения и пару значений. В качестве имени значения укажите идентификатор пользовательской модели приложения или имя исполняемого файла. Для применения ко всем приложениям можно использовать в качестве имени значения подстановочный знак "*".
+
+  <h5>Поддерживаемые функции:</h5>
+  <ul>
+  <li>
+      Может быть обязательной:
+       Да
+  </li>
+  <li>
+      Может быть рекомендованной:
+       Нет
+  </li>
+  <li>
+      Динамическое обновление политики:
+      
+      Да
+      
+  </li>
+  </ul>
+
+  <h5>Тип данных:</h5>
+  <ul><li>Список строк</li></ul>
+
+
+  
+  <h5>Настройки и сведения Windows</h5>
+  <h6>Сведения о групповой политике (ADMX)</h6>
+  <ul>
+  <li>Уникальное имя групповой политики: BrowserExecutableFolder</li>
+  <li>Имя групповой политики: Настройка расположения исполняемой папки браузера</li>
+  <li>Путь групповой политики (Обязательно):
+    
+        Административные шаблоны/Microsoft Edge WebView2/Параметры переопределения загрузчика
+    </li>
+  <li>Путь групповой политики (Рекомендовано):
+    Н/Д</li>
+  <li>Имя файла групповой политики ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Настройки реестра Windows</h6>
+  <ul>
+  <li>Путь (Обязательно):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Путь (Рекомендовано):
+    Н/Д</li>
+  <li>Имя значения:
+    Список REG_SZ
+    </li>
+  <li>Тип значения:
+    Список REG_SZ
+    </li>
+  </ul>
+  <h6>Пример значения:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-политики">В начало</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Настройка предпочтений порядка поиска в канале выпуска</h4>
+  
+  
+  <h5>Поддерживаемые версии:</h5>
+  <ul><li>На Windows с 87 или более поздней версии</li></ul>
+
+  <h5>Описание</h5>
+  По умолчанию задан следующий порядок поиска в каналах: WebView2 Runtime, Beta, Dev и Canary.<br><br>Чтобы изменить заданный по умолчанию порядок, установите для данной политики значение "1".<br><br>Чтобы задать значение параметра предпочтения каналов выпуска, укажите имя значения и пару значений. В качестве имени значения укажите идентификатор пользовательской модели приложения или имя исполняемого файла. Для применения ко всем приложениям можно использовать в качестве имени значения подстановочный знак "*".
+
+  <h5>Поддерживаемые функции:</h5>
+  <ul>
+  <li>
+      Может быть обязательной:
+       Да
+  </li>
+  <li>
+      Может быть рекомендованной:
+       Нет
+  </li>
+  <li>
+      Динамическое обновление политики:
+      
+      Да
+      
+  </li>
+  </ul>
+
+  <h5>Тип данных:</h5>
+  <ul><li>Список строк</li></ul>
+
+
+  
+  <h5>Настройки и сведения Windows</h5>
+  <h6>Сведения о групповой политике (ADMX)</h6>
+  <ul>
+  <li>Уникальное имя групповой политики: ReleaseChannelPreference</li>
+  <li>Имя групповой политики: Настройка предпочтений порядка поиска в канале выпуска</li>
+  <li>Путь групповой политики (Обязательно):
+    
+        Административные шаблоны/Microsoft Edge WebView2/Параметры переопределения загрузчика
+    </li>
+  <li>Путь групповой политики (Рекомендовано):
+    Н/Д</li>
+  <li>Имя файла групповой политики ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Настройки реестра Windows</h6>
+  <ul>
+  <li>Путь (Обязательно):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Путь (Рекомендовано):
+    Н/Д</li>
+  <li>Имя значения:
+    Список REG_SZ
+    </li>
+  <li>Тип значения:
+    Список REG_SZ
+    </li>
+  </ul>
+  <h6>Пример значения:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-политики">В начало</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-—-политики">В начало</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Управление связью со службой "Служба расширенной конфигурации"</h4>
+  
+  
+  <h5>Поддерживаемые версии:</h5>
+  <ul><li>На Windows с 97 или более поздней версии</li></ul>
+
+  <h5>Описание</h5>
+  Для развертывания полезных данных экспериментов и конфигураций в клиенте используется служба "Служба расширенной конфигурации".<br><br>Полезные данные экспериментов представляют собой список средств разработки, которые корпорация Майкрософт предоставляет для тестирования и обратной связи.<br><br>Полезные данные конфигурации представляют собой список рекомендуемых настроек, которые Майкрософт хочет реализовать для оптимизации взаимодействия с пользователем.<br><br>Кроме того, полезные данные конфигурации также могут содержать список действий, которые необходимо выполнить с определенными доменами по причинам совместимости. Например, браузер может переопределить строку "Агент пользователя" на веб-сайте, если этот веб-сайт не работает. Каждое из этих действий применяется в течение ограниченного времени, пока Майкрософт пытается устранить проблему с владельцем сайта.<br><br>Если для этой политики задан режим "FullMode", из службы "Служба расширенной конфигурации" загружаются все полезные данные, относящиеся как к экспериментам, так и к конфигурации.<br><br>Если для этой политики задан режим "ConfigurationsOnlyMode", загружаются только полезные данные конфигурации.<br><br>Если для этой политики задан режим "RestrictedMode", обмен данными со службой "Служба расширенной конфигурации" полностью прекращается. Майкрософт не рекомендует выбирать этот параметр.<br><br>Если не настроить эту политику на управляемом устройстве, в каналах Stable и Beta выполняется тот же сценарий, что и при режиме "ConfigurationsOnlyMode". В каналах Canary и Dev выполняется тот же сценарий, что и при режиме "FullMode".<br><br>Если не настроить эту политику на неуправляемом устройстве, выполняется тот же сценарий, что и при режиме "FullMode".<br><br>Сопоставление параметров политики:<br><br>* FullMode (2) = Получать конфигурации и эксперименты<br><br>* ConfigurationsOnlyMode (1) = Получать только конфигурации<br><br>* RestrictedMode (0) = Отключить связь со службой "Служба расширенной конфигурации"<br><br>Используйте предоставленную выше информацию при настройке этой политики.
+
+  <h5>Поддерживаемые функции:</h5>
+  <ul>
+  <li>
+      Может быть обязательной:
+       Да
+  </li>
+  <li>
+      Может быть рекомендованной:
+       Нет
+  </li>
+  <li>
+      Динамическое обновление политики:
+      
+      Да
+      
+  </li>
+  </ul>
+
+  <h5>Тип данных:</h5>
+  <ul><li>Целое</li></ul>
+
+
+  
+  <h5>Настройки и сведения Windows</h5>
+  <h6>Сведения о групповой политике (ADMX)</h6>
+  <ul>
+  <li>Уникальное имя групповой политики: ExperimentationAndConfigurationServiceControl</li>
+  <li>Имя групповой политики: Управление связью со службой "Служба расширенной конфигурации"</li>
+  <li>Путь групповой политики (Обязательно):
+    
+        Административные шаблоны/Microsoft Edge WebView2/
+    </li>
+  <li>Путь групповой политики (Рекомендовано):
+    Н/Д</li>
+  <li>Имя файла групповой политики ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Настройки реестра Windows</h6>
+  <ul>
+  <li>Путь (Обязательно):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Путь (Рекомендовано):
+    Н/Д</li>
+  <li>Имя значения:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Тип значения:
+    REG_DWORD</li>
+  </ul>
+  <h6>Пример значения:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-политики">В начало</a>
+
+
+
+<h2>См. также</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Настройка Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Целевая страница предприятия в Microsoft Edge</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Блог базовых планов безопасности Microsoft Security</a></li>
+</ul>
+
+</body>
+</html>

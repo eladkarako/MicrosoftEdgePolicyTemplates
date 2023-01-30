@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-i̇lkeleri"></a>
+<h1>Microsoft Edge WebView2 İlkeleri</h1>
+Microsoft Edge WebView2'nin en son sürümü aşağıdaki ilkeleri içerir. Microsoft Edge WebView2'nin kuruluşunuzda nasıl çalışacağını yapılandırmak için bu ilkeleri kullanabilirsiniz.
+
+Microsoft Edge WebView2'nin nasıl ve ne zaman güncelleştirileceğini denetlemek için kullanılan ek ilkeler hakkında bilgi için <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge Update ilke başvurusu</a> adresine bakın.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>NOT</p>
+<p>Bu makale Microsoft Edge 87 veya sonraki sürümler için geçerlidir.</p>
+</div>
+
+<h2>Kullanılabilir ilkeler</h2>
+Bu tablolar, Microsoft Edge WebView2'nin bu sürümünde bulunan tüm grup ilkelerini listeler. Belirli ilkeler hakkında daha fazla ayrıntı almak için tablodaki bağlantıları kullanın.
+
+<table>
+
+<tr><td><a href="#Yükleyici Geçersiz Kılma Ayarları">Yükleyici Geçersiz Kılma Ayarları</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Yükleyici Geçersiz Kılma Ayarları"><a href="#Yükleyici Geçersiz Kılma Ayarları-policies"><i>Yükleyici Geçersiz Kılma Ayarları</i></a></a>
+    <table>
+      <tr><th>İlke Adı</th><th>Resim Yazısı</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Tarayıcı yürütülebilir klasörünün konumunu yapılandırın</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Sürüm kanalı arama sırası tercihini ayarlama</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>İlke Adı</th><th>Resim Yazısı</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Deneme ve Yapılandırma Hizmeti ile iletişimi kontrol et</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Yükleyici Geçersiz Kılma Ayarları-policies"></a>Yükleyici Geçersiz Kılma Ayarları policies</h2>
+  <br /><a href="#microsoft-edge-webview2-i̇lkeleri">Başa dön</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Tarayıcı yürütülebilir klasörünün konumunu yapılandırın</h4>
+  
+  
+  <h5>Desteklenen sürümler:</h5>
+  <ul><li>Windows veya sonrasından itibaren 87 üzerinde</li></ul>
+
+  <h5>Açıklama</h5>
+  Bu ilke WebView2 uygulamalarını belirtilen yolda WebView2 Çalışma Zamanı'nı kullanacak şekilde yapılandırır. Klasör şu dosyaları içermelidir: msedgewebview2.exe, msedge.dll vb.<br><br>Klasör yolunun değerini ayarlamak için bir Değer adı ve Değer çifti sağlayın. Değer adı olarak Uygulama Kullanıcı Modeli Kimliği'ni veya yürütülebilir dosya adını ayarlayın. Tüm uygulamalara uygulamak için değer adı olarak "*" joker karakterini kullanabilirsiniz.
+
+  <h5>Desteklenen özellikler:</h5>
+  <ul>
+  <li>
+      Zorunlu olabilir:
+       Evet
+  </li>
+  <li>
+      Önerilen olabilir:
+       Hayır
+  </li>
+  <li>
+      Dinamik İlke Yenileme:
+      
+      Evet
+      
+  </li>
+  </ul>
+
+  <h5>Veri Türü:</h5>
+  <ul><li>Dize listesi</li></ul>
+
+
+  
+  <h5>Windows bilgileri ve ayarları</h5>
+  <h6>Grup İlkesi (ADMX) bilgileri</h6>
+  <ul>
+  <li>GP benzersiz adı: BrowserExecutableFolder</li>
+  <li>GP adı: Tarayıcı yürütülebilir klasörünün konumunu yapılandırın</li>
+  <li>GP yolu (Zorunlu):
+    
+        Yönetim Şablonları/Microsoft Edge WebView2/Yükleyici Geçersiz Kılma Ayarları
+    </li>
+  <li>GP yolu (Önerilen):
+    Yok</li>
+  <li>GP ADMX dosya adı: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Kayıt Defteri Ayarları</h6>
+  <ul>
+  <li>Yol (Zorunlu):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Yol (Önerilen):
+    Yok</li>
+  <li>Değer Adı:
+    REG_SZ listesi
+    </li>
+  <li>Değer Türü:
+    REG_SZ listesi
+    </li>
+  </ul>
+  <h6>Örnek değer:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-i̇lkeleri">Başa dön</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Sürüm kanalı arama sırası tercihini ayarlama</h4>
+  
+  
+  <h5>Desteklenen sürümler:</h5>
+  <ul><li>Windows veya sonrasından itibaren 87 üzerinde</li></ul>
+
+  <h5>Açıklama</h5>
+  Varsayılan kanal arama sırası WebView2 Runtime, Beta, Dev ve Canary'dir.<br><br>Varsayılan arama sırasını tersine çevirmek için bu ilkeyi 1 olarak ayarlayın.<br><br>Sürüm kanalı tercihinin değerini ayarlamak için bir Değer adı ve Değer çifti sağlayın. Değer adı olarak Uygulama Kullanıcı Modeli Kimliği'ni veya yürütülebilir dosya adını ayarlayın. Tüm uygulamalara uygulamak için değer adı olarak "*" joker karakterini kullanabilirsiniz.
+
+  <h5>Desteklenen özellikler:</h5>
+  <ul>
+  <li>
+      Zorunlu olabilir:
+       Evet
+  </li>
+  <li>
+      Önerilen olabilir:
+       Hayır
+  </li>
+  <li>
+      Dinamik İlke Yenileme:
+      
+      Evet
+      
+  </li>
+  </ul>
+
+  <h5>Veri Türü:</h5>
+  <ul><li>Dize listesi</li></ul>
+
+
+  
+  <h5>Windows bilgileri ve ayarları</h5>
+  <h6>Grup İlkesi (ADMX) bilgileri</h6>
+  <ul>
+  <li>GP benzersiz adı: ReleaseChannelPreference</li>
+  <li>GP adı: Sürüm kanalı arama sırası tercihini ayarlama</li>
+  <li>GP yolu (Zorunlu):
+    
+        Yönetim Şablonları/Microsoft Edge WebView2/Yükleyici Geçersiz Kılma Ayarları
+    </li>
+  <li>GP yolu (Önerilen):
+    Yok</li>
+  <li>GP ADMX dosya adı: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Kayıt Defteri Ayarları</h6>
+  <ul>
+  <li>Yol (Zorunlu):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Yol (Önerilen):
+    Yok</li>
+  <li>Değer Adı:
+    REG_SZ listesi
+    </li>
+  <li>Değer Türü:
+    REG_SZ listesi
+    </li>
+  </ul>
+  <h6>Örnek değer:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-i̇lkeleri">Başa dön</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-i̇lkeleri">Başa dön</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Deneme ve Yapılandırma Hizmeti ile iletişimi kontrol et</h4>
+  
+  
+  <h5>Desteklenen sürümler:</h5>
+  <ul><li>Windows veya sonrasından itibaren 97 üzerinde</li></ul>
+
+  <h5>Açıklama</h5>
+  Deneme ve Yapılandırma Hizmeti, istemcinin Deneme ve Yapılandırma yükünü dağıtmak için kullanılır.<br><br>Deneme yükü, Microsoft'un test etme ve geri bildirim için etkinleştirdiği erken geliştirme özelliklerinin bir listesinden oluşur.<br><br>Yapılandırma yükü, Microsoft'un kullanıcı deneyimini optimize etmek için dağıtmak istediği ayarların bir listesinden oluşur.<br><br> Yapılandırma yükü ayrıca, uyumluluk nedeniyle belirli etki alanlarında gerçekleştirilecek eylemlerin bir listesini de içerebilir. Örneğin, yeni Kullanıcı Aracısı dizesi nedeniyle bu web sitesi bozulursa tarayıcı bir web sitesindeki Kullanıcı Aracısı dizesini geçersiz kılabilir. Microsoft site sahibi ile sorunu çözmeye çalışırken bu eylemlerin her birinin geçici olması amaçlanmıştır.<br><br>      Bu ilkeyi 'FullMode' olarak ayarlarsanız, tam yük Deneme ve Yapılandırma Hizmeti'nden indirilir. Buna hem deneme hem de yapılandırma yükleri dahildir.<br><br>Bu ilkeyi 'ConfigurationsOnlyMode' olarak ayarlarsanız, yalnızca yapılandırma yükü indirilir.<br><br>Bu ilkeyi 'RestrictedMode' olarak ayarlarsanız, iletişim Deneme ve Yapılandırma Hizmeti tamamen durdurulur. Microsoft bu ayarı önermez.<br><br>Bu ilkeyi yönetilen bir cihazda yapılandırmazsanız, Kararlı ve Beta kanallarındaki yönetilen bir cihazda davranış 'ConfigurationsOnlyMode' ile aynıdır. Canary ve Dev kanallarında davranış 'FullMode' ile aynıdır.<br><br> Bu ilkeyi yönetilmeyen bir cihazda yapılandırmazsanız, davranış 'FullMode' ile aynıdır.<br><br>İlke seçenekleri eşleme:<br><br>* FullMode (2) = Yapılandırmaları ve denemeleri al<br><br>* ConfigurationsOnlyMode (1) = Yalnızca yapılandırmaları al<br><br>* RestrictedMode (0) = Deneme ve Yapılandırma Hizmeti ile iletişimi devre dışı bırak<br><br>Bu ilkeyi yapılandırırken önceki bilgileri kullanın.
+
+  <h5>Desteklenen özellikler:</h5>
+  <ul>
+  <li>
+      Zorunlu olabilir:
+       Evet
+  </li>
+  <li>
+      Önerilen olabilir:
+       Hayır
+  </li>
+  <li>
+      Dinamik İlke Yenileme:
+      
+      Evet
+      
+  </li>
+  </ul>
+
+  <h5>Veri Türü:</h5>
+  <ul><li>Tamsayı</li></ul>
+
+
+  
+  <h5>Windows bilgileri ve ayarları</h5>
+  <h6>Grup İlkesi (ADMX) bilgileri</h6>
+  <ul>
+  <li>GP benzersiz adı: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP adı: Deneme ve Yapılandırma Hizmeti ile iletişimi kontrol et</li>
+  <li>GP yolu (Zorunlu):
+    
+        Yönetim Şablonları/Microsoft Edge WebView2/
+    </li>
+  <li>GP yolu (Önerilen):
+    Yok</li>
+  <li>GP ADMX dosya adı: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows Kayıt Defteri Ayarları</h6>
+  <ul>
+  <li>Yol (Zorunlu):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Yol (Önerilen):
+    Yok</li>
+  <li>Değer Adı:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Değer Türü:
+    REG_DWORD</li>
+  </ul>
+  <h6>Örnek değer:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-i̇lkeleri">Başa dön</a>
+
+
+
+<h2>Ayrıca bk.</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Microsoft Edge yapılandırılıyor</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge Kuruluş açılış sayfası</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Güvenlik Temelleri Blogu</a></li>
+</ul>
+
+</body>
+</html>

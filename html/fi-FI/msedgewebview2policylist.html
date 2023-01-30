@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-käytännöt"></a>
+<h1>Microsoft Edge WebView2 – Käytännöt</h1>
+Uusin Microsoft Edge WebView2 -versio sisältää seuraavat käytännöt. Näiden käytäntöjen avulla voit määrittää, miten Microsoft Edge WebView2 toimii organisaatiossasi.
+
+Lisätietoja muista käytännöistä, jotka liittyvät siihen, miten ja milloin Microsoft Edge WebView2 päivitetään, on täällä: <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edgen päivityskäytännön lähdeaineisto</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>HUOMAUTUS</p>
+<p>Tämä artikkeli koskee Microsoft Edge -versiota 87 ja uudempia versioita.</p>
+</div>
+
+<h2>Käytettävissä olevat käytännöt</h2>
+Näissä taulukoissa on lueteltu kaikki tässä Microsoft Edge WebView2 -versiossa käytettävissä olevat ryhmäkäytännöt. Taulukon linkeistä saat lisätietoja tietyistä käytännöistä.
+
+<table>
+
+<tr><td><a href="#Latausohjelman ohitusasetukset">Latausohjelman ohitusasetukset</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Latausohjelman ohitusasetukset"><a href="#Latausohjelman ohitusasetukset-policies"><i>Latausohjelman ohitusasetukset</i></a></a>
+    <table>
+      <tr><th>Käytännön nimi</th><th>Kuvateksti</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Määritä selaimen suoritettavan kansion sijainti</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Määritä julkaisukanavan hakujärjestyksen asetukset</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Käytännön nimi</th><th>Kuvateksti</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Ohjaa tietoliikennettä Experimentation and Configuration Service -palvelun kanssa</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Latausohjelman ohitusasetukset-policies"></a>Latausohjelman ohitusasetukset policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-käytännöt">Palaa alkuun</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Määritä selaimen suoritettavan kansion sijainti</h4>
+  
+  
+  <h5>Tuetut versiot:</h5>
+  <ul><li>Käyttöympäristössä Windows versiosta 87 tai sitä uudemmasta lähtien</li></ul>
+
+  <h5>Kuvaus</h5>
+  Tämä käytäntö määrittää WebView2-sovellukset käyttämään WebView2 Runtimea määritetyllä polulla. Kansion tulee sisältää seuraavat tiedostot: msedgewebview2, msedge.dll ja niin edelleen.<br><br>Määritä kansiopolun arvo kirjoittamalla arvonimi ja arvopari. Määritä arvon nimi sovelluksen käyttäjämallin tunnukseen tai ohjelmatiedoston nimeen. Voit käyttää yleismerkkiä * kaikkiin sovelluksiin lisättävän arvon nimenä.
+
+  <h5>Tuetut ominaisuudet:</h5>
+  <ul>
+  <li>
+      Voi olla pakollinen:
+       Kyllä
+  </li>
+  <li>
+      Voidaan suositella:
+       Ei
+  </li>
+  <li>
+      Dynaaminen käytäntöpäivitys:
+      
+      Kyllä
+      
+  </li>
+  </ul>
+
+  <h5>Tietotyyppi:</h5>
+  <ul><li>Merkkijonojen luettelo</li></ul>
+
+
+  
+  <h5>Windowsin tiedot ja asetukset</h5>
+  <h6>Ryhmäkäytännön (ADMX) tiedot</h6>
+  <ul>
+  <li>Ryhmäkäytännön yksilöivä nimi: BrowserExecutableFolder</li>
+  <li>Ryhmäkäytännön nimi: Määritä selaimen suoritettavan kansion sijainti</li>
+  <li>Ryhmäkäytännön polku (Pakollinen):
+    
+        Hallintamallit / Microsoft Edge WebView2/Latausohjelman ohitusasetukset
+    </li>
+  <li>Ryhmäkäytännön polku (Ehdotukset):
+    –</li>
+  <li>Ryhmäkäytännön ADMX-tiedoston nimi: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windowsin rekisteriasetukset</h6>
+  <ul>
+  <li>Polku (Pakollinen):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Polku (Ehdotukset):
+    –</li>
+  <li>Arvon nimi:
+    REG_SZ-luettelo
+    </li>
+  <li>Arvon tyyppi:
+    REG_SZ-luettelo
+    </li>
+  </ul>
+  <h6>Esimerkkiarvo:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-käytännöt">Palaa alkuun</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Määritä julkaisukanavan hakujärjestyksen asetukset</h4>
+  
+  
+  <h5>Tuetut versiot:</h5>
+  <ul><li>Käyttöympäristössä Windows versiosta 87 tai sitä uudemmasta lähtien</li></ul>
+
+  <h5>Kuvaus</h5>
+  Kanavan oletusarvoinen hakujärjestys on WebView2 Runtime, Beta, Dev ja Canary.<br><br>Voit kääntää oletusarvoisen hakujärjestyksen muuttamalla tämän käytännön arvoksi 1.<br><br>Määritä julkaisukanava-asetuksen arvo kirjoittamalla arvonimi ja arvopari. Määritä arvon nimi sovelluksen käyttäjämallin tunnukseen tai ohjelmatiedoston nimeen. Voit käyttää yleismerkkiä * kaikkiin sovelluksiin lisättävän arvon nimenä.
+
+  <h5>Tuetut ominaisuudet:</h5>
+  <ul>
+  <li>
+      Voi olla pakollinen:
+       Kyllä
+  </li>
+  <li>
+      Voidaan suositella:
+       Ei
+  </li>
+  <li>
+      Dynaaminen käytäntöpäivitys:
+      
+      Kyllä
+      
+  </li>
+  </ul>
+
+  <h5>Tietotyyppi:</h5>
+  <ul><li>Merkkijonojen luettelo</li></ul>
+
+
+  
+  <h5>Windowsin tiedot ja asetukset</h5>
+  <h6>Ryhmäkäytännön (ADMX) tiedot</h6>
+  <ul>
+  <li>Ryhmäkäytännön yksilöivä nimi: ReleaseChannelPreference</li>
+  <li>Ryhmäkäytännön nimi: Määritä julkaisukanavan hakujärjestyksen asetukset</li>
+  <li>Ryhmäkäytännön polku (Pakollinen):
+    
+        Hallintamallit / Microsoft Edge WebView2/Latausohjelman ohitusasetukset
+    </li>
+  <li>Ryhmäkäytännön polku (Ehdotukset):
+    –</li>
+  <li>Ryhmäkäytännön ADMX-tiedoston nimi: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windowsin rekisteriasetukset</h6>
+  <ul>
+  <li>Polku (Pakollinen):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Polku (Ehdotukset):
+    –</li>
+  <li>Arvon nimi:
+    REG_SZ-luettelo
+    </li>
+  <li>Arvon tyyppi:
+    REG_SZ-luettelo
+    </li>
+  </ul>
+  <h6>Esimerkkiarvo:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-käytännöt">Palaa alkuun</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-käytännöt">Palaa alkuun</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Ohjaa tietoliikennettä Experimentation and Configuration Service -palvelun kanssa</h4>
+  
+  
+  <h5>Tuetut versiot:</h5>
+  <ul><li>Käyttöympäristössä Windows versiosta 97 tai sitä uudemmasta lähtien</li></ul>
+
+  <h5>Kuvaus</h5>
+  Experimentation and Configuration Service -palvelua käytetään kokeilu- ja määritystietojen käyttöönottoon asiakkaalle.<br><br>Kokeilutiedot koostuvat luettelosta, jossa on kehitysominaisuuksia, joita Microsoft ottaa käyttöön testausta ja palautetta varten.<br><br>Määritystiedot koostuvat suositelluista asetuksista, jotka Microsoft haluaa ottaa käyttöön käyttökokemuksen optimoimiseksi.<br><br>Määritystiedot voivat sisältää myös luettelon tietyille toimialueille yhteensopivuudesta johtuen. Selain voi esimerkiksi ohittaa käyttäjäagentin merkkijonon sivustossa, jos kyseinen sivusto ei toimi. Kunkin toiminnon on tarkoitus olla tilapäinen, kun Microsoft yrittää ratkaista ongelman sivuston omistajan kanssa.<br><br>Jos määrität tämän käytännön arvoksi FullMode, kaikki tiedot ladataan Experimentation and Configuration Service -palvelusta. Tämä sisältää sekä kokeilu- että määritystiedot.<br><br>Jos määrität tämän käytännön asetukseksi ConfigurationsOnlyMode, vain määritystiedot ladataan.<br><br>Jos määrität tämän käytännön arvoksi RestrictedMode, tietoliikenne Experimentation and Configuration Service -palvelun kanssa pysäytetään kokonaan. Microsoft ei suosittele tätä asetusta.<br><br>Jos et määritä tätä käytäntöä hallitussa laitteessa, beeta- ja vakaa-kanavien toiminta on sama kuin ConfigurationsOnlyMode. Canary- ja Dev-kanavissa toiminta on sama kuin FullMode.<br><br>Jos et määritä tätä käytäntöä hallitsemattomaan laitteeseen, toiminta on sama kuin FullMode.<br><br>Käytäntöasetusten määrittäminen:<br><br>* FullMode (2) = Nouda määritykset ja testit<br><br>* ConfigurationsOnlyMode (1) = Nouda vain kokoonpanot<br><br>* RestrictedMode (0) = Poista tietoliikenne Experimentation and Configuration Service -palvelun kanssa käytöstä<br><br>Käytä edellä mainittuja tietoja, kun määrität tätä käytäntöä.
+
+  <h5>Tuetut ominaisuudet:</h5>
+  <ul>
+  <li>
+      Voi olla pakollinen:
+       Kyllä
+  </li>
+  <li>
+      Voidaan suositella:
+       Ei
+  </li>
+  <li>
+      Dynaaminen käytäntöpäivitys:
+      
+      Kyllä
+      
+  </li>
+  </ul>
+
+  <h5>Tietotyyppi:</h5>
+  <ul><li>Kokonaisluku</li></ul>
+
+
+  
+  <h5>Windowsin tiedot ja asetukset</h5>
+  <h6>Ryhmäkäytännön (ADMX) tiedot</h6>
+  <ul>
+  <li>Ryhmäkäytännön yksilöivä nimi: ExperimentationAndConfigurationServiceControl</li>
+  <li>Ryhmäkäytännön nimi: Ohjaa tietoliikennettä Experimentation and Configuration Service -palvelun kanssa</li>
+  <li>Ryhmäkäytännön polku (Pakollinen):
+    
+        Hallintamallit / Microsoft Edge WebView2/
+    </li>
+  <li>Ryhmäkäytännön polku (Ehdotukset):
+    –</li>
+  <li>Ryhmäkäytännön ADMX-tiedoston nimi: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windowsin rekisteriasetukset</h6>
+  <ul>
+  <li>Polku (Pakollinen):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Polku (Ehdotukset):
+    –</li>
+  <li>Arvon nimi:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Arvon tyyppi:
+    REG_DWORD</li>
+  </ul>
+  <h6>Esimerkkiarvo:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-käytännöt">Palaa alkuun</a>
+
+
+
+<h2>Katso myös</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Microsoft Edgen määrittäminen</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edgen yritystilan aloitussivu</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Securityn perusteet -blogi</a></li>
+</ul>
+
+</body>
+</html>

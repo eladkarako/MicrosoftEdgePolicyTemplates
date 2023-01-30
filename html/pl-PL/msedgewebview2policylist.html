@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-—-zasady"></a>
+<h1>Microsoft Edge WebView2 — zasady</h1>
+Najnowsza wersja aplikacji Microsoft Edge WebView2 zawiera wymienione poniżej zasady. Możesz użyć tych zasad, aby skonfigurować sposób działania aplikacji Microsoft Edge WebView2 w Twojej organizacji.
+
+Aby uzyskać informacje dotyczące dodatkowego zestawu zasad służących do określania sposobu i terminów aktualizowania przeglądarki Microsoft Edge WebView2, zobacz <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge — aktualizacja informacji referencyjnych dotyczących zasad</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>UWAGA</p>
+<p>Ten artykuł dotyczy przeglądarki Microsoft Edge w wersji 87 lub nowszej.</p>
+</div>
+
+<h2>Dostępne zasady</h2>
+W tych tabelach wymieniono wszystkie zasady grupy, które są dostępne w tym wydaniu aplikacji Microsoft Edge WebView2. Użyj linków w tabeli, aby uzyskać więcej szczegółów dotyczących konkretnych zasad.
+
+<table>
+
+<tr><td><a href="#Ustawienia zastępowania modułu ładującego">Ustawienia zastępowania modułu ładującego</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Ustawienia zastępowania modułu ładującego"><a href="#Ustawienia zastępowania modułu ładującego-policies"><i>Ustawienia zastępowania modułu ładującego</i></a></a>
+    <table>
+      <tr><th>Nazwa zasady</th><th>Podpis</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Konfiguruj lokalizację folderu wykonywalnego przeglądarki</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Ustaw preferencję kolejności wyszukiwania kanału wersji</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Nazwa zasady</th><th>Podpis</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Kontroluj komunikację z Usługą Eksperymentalno-Konfiguracyjną</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Ustawienia zastępowania modułu ładującego-policies"></a>Ustawienia zastępowania modułu ładującego policies</h2>
+  <br /><a href="#microsoft-edge-webview2-—-zasady">Powrót do początku</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Konfiguruj lokalizację folderu wykonywalnego przeglądarki</h4>
+  
+  
+  <h5>Obsługiwane wersje:</h5>
+  <ul><li>Na platformie Windows od wersji 87 lub nowszej</li></ul>
+
+  <h5>Opis</h5>
+  Te zasady konfigurują aplikacje WebView2 do używania środowiska uruchomieniowego WebView2 w określonej ścieżce. Folder powinien zawierać następujące pliki: msedgewebview2.exe, msedge.dll itp.<br><br>Aby określić wartość ścieżki folderu, podaj nazwę wartości i parę wartości. Ustaw nazwę wartości jako identyfikator modelu użytkownika aplikacji lub nazwę pliku wykonywalnego. Aby zastosować je do wszystkich aplikacji, można użyć symbolu wieloznacznego „*” jako nazwy wartości.
+
+  <h5>Obsługiwane funkcje:</h5>
+  <ul>
+  <li>
+      Może być obowiązkowa:
+       Tak
+  </li>
+  <li>
+      Może być zalecana:
+       Nie
+  </li>
+  <li>
+      Dynamiczne odświeżanie zasad:
+      
+      Tak
+      
+  </li>
+  </ul>
+
+  <h5>Typ danych:</h5>
+  <ul><li>Lista ciągów</li></ul>
+
+
+  
+  <h5>Informacje i ustawienia systemu Windows</h5>
+  <h6>Informacje dotyczące zasad grupy (ADMX)</h6>
+  <ul>
+  <li>Unikatowa nazwa zasady grupy: BrowserExecutableFolder</li>
+  <li>Nazwa zasady grupy: Konfiguruj lokalizację folderu wykonywalnego przeglądarki</li>
+  <li>Ścieżka zasad grupy (Wymagane):
+    
+        Szablony administracyjne/Microsoft Edge WebView2/Ustawienia zastępowania modułu ładującego
+    </li>
+  <li>Ścieżka zasad grupy (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa pliku ADMX zasad grupy: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ustawienia rejestru systemu Windows</h6>
+  <ul>
+  <li>Ścieżka (Wymagane):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Ścieżka (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa wartości:
+    lista wartości REG_SZ
+    </li>
+  <li>Typ wartości:
+    lista wartości REG_SZ
+    </li>
+  </ul>
+  <h6>Przykładowa wartość:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-zasady">Powrót do początku</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Ustaw preferencję kolejności wyszukiwania kanału wersji</h4>
+  
+  
+  <h5>Obsługiwane wersje:</h5>
+  <ul><li>Na platformie Windows od wersji 87 lub nowszej</li></ul>
+
+  <h5>Opis</h5>
+  Domyślna kolejność wyszukiwania kanałów to środowisko uruchomieniowe WebView2, Beta, Dev i Canary.<br><br>Aby odwrócić domyślną kolejność wyszukiwania, ustaw dla tych zasad wartość 1.<br><br>Aby ustawić wartość preferencji kanału wersji, podaj nazwę wartości i parę wartości. Ustaw nazwę wartości na identyfikator modelu użytkownika aplikacji lub nazwę pliku wykonywalnego. Aby zastosować je do wszystkich aplikacji, można użyć symbolu wieloznacznego „*” jako nazwy wartości.
+
+  <h5>Obsługiwane funkcje:</h5>
+  <ul>
+  <li>
+      Może być obowiązkowa:
+       Tak
+  </li>
+  <li>
+      Może być zalecana:
+       Nie
+  </li>
+  <li>
+      Dynamiczne odświeżanie zasad:
+      
+      Tak
+      
+  </li>
+  </ul>
+
+  <h5>Typ danych:</h5>
+  <ul><li>Lista ciągów</li></ul>
+
+
+  
+  <h5>Informacje i ustawienia systemu Windows</h5>
+  <h6>Informacje dotyczące zasad grupy (ADMX)</h6>
+  <ul>
+  <li>Unikatowa nazwa zasady grupy: ReleaseChannelPreference</li>
+  <li>Nazwa zasady grupy: Ustaw preferencję kolejności wyszukiwania kanału wersji</li>
+  <li>Ścieżka zasad grupy (Wymagane):
+    
+        Szablony administracyjne/Microsoft Edge WebView2/Ustawienia zastępowania modułu ładującego
+    </li>
+  <li>Ścieżka zasad grupy (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa pliku ADMX zasad grupy: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ustawienia rejestru systemu Windows</h6>
+  <ul>
+  <li>Ścieżka (Wymagane):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Ścieżka (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa wartości:
+    lista wartości REG_SZ
+    </li>
+  <li>Typ wartości:
+    lista wartości REG_SZ
+    </li>
+  </ul>
+  <h6>Przykładowa wartość:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-zasady">Powrót do początku</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-—-zasady">Powrót do początku</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Kontroluj komunikację z Usługą Eksperymentalno-Konfiguracyjną</h4>
+  
+  
+  <h5>Obsługiwane wersje:</h5>
+  <ul><li>Na platformie Windows od wersji 97 lub nowszej</li></ul>
+
+  <h5>Opis</h5>
+  Usługa Eksperymentalno-Konfiguracyjna służy do wdrażania ładunków eksperymentowania i konfiguracji w ramach klienta.<br><br>Ładunek eksperymentowania składa się z listy funkcji na wczesnym etapie opracowywania, które firma Microsoft włącza na potrzeby testowania i uzyskiwania opinii.<br><br>Ładunek konfiguracji składa się z listy polecanych ustawień, które firma Microsoft chce wdrożyć w celu zoptymalizowania środowiska użytkownika.<br><br>Ładunek konfiguracji może też zawierać listę akcji do wykonania w przypadku określonych domen ze względu na zgodność. Na przykład przeglądarka może zastąpić ciąg agenta użytkownika w witrynie internetowej, jeśli ta witryna jest uszkodzona. Każda z tych akcji ma być tymczasowa, gdy firma Microsoft próbuje rozwiązać problem z właścicielem witryny.<br><br>Jeśli ustawisz tę zasadę na wartość „FullMode”, zostanie pobrany cały ładunek z Usługi Eksperymentalno-Konfiguracyjnej. Dotyczy to zarówno ładunków eksperymentowania, jak i ładunków konfiguracji.<br><br>Jeśli ustawisz tę zasadę na wartość „ConfigurationsOnlyMode”, zostanie pobrany tylko ładunek konfiguracji.<br><br>Jeśli ustawisz te zasady na wartość „RestrictedMode”, komunikacja z Usługą Eksperymentalno-Konfiguracyjną zostanie całkowicie zatrzymana. To ustawienie nie jest zalecane przez firmę Microsoft.<br><br>  Jeśli te zasady nie zostaną skonfigurowane na urządzeniu zarządzanym, zachowanie w kanałach stabilnym i beta będzie takie samo jak w przypadku wartości „ConfigurationsOnlyMode”. W kanale Canary i kanale dla deweloperów zachowanie będzie takie samo jak w przypadku wartości „FullMode”.<br><br>Jeśli te zasady nie zostaną skonfigurowane na urządzeniu zarządzanym, zachowanie będzie takie samo jak w przypadku wartości „FullMode”.<br><br>Mapowanie opcji zasad:<br><br>* FullMode (2) = Pobierz konfiguracje i eksperymenty<br><br>* ConfigurationsOnlyMode (1) = Pobierz tylko konfiguracje<br><br>* RestrictedMode (0) = Wyłącz komunikację z Usługą Eksperymentalno-Konfiguracyjną<br><br>Użyj powyższych informacji, konfigurując tę zasadę.
+
+  <h5>Obsługiwane funkcje:</h5>
+  <ul>
+  <li>
+      Może być obowiązkowa:
+       Tak
+  </li>
+  <li>
+      Może być zalecana:
+       Nie
+  </li>
+  <li>
+      Dynamiczne odświeżanie zasad:
+      
+      Tak
+      
+  </li>
+  </ul>
+
+  <h5>Typ danych:</h5>
+  <ul><li>Liczba całkowita</li></ul>
+
+
+  
+  <h5>Informacje i ustawienia systemu Windows</h5>
+  <h6>Informacje dotyczące zasad grupy (ADMX)</h6>
+  <ul>
+  <li>Unikatowa nazwa zasady grupy: ExperimentationAndConfigurationServiceControl</li>
+  <li>Nazwa zasady grupy: Kontroluj komunikację z Usługą Eksperymentalno-Konfiguracyjną</li>
+  <li>Ścieżka zasad grupy (Wymagane):
+    
+        Szablony administracyjne/Microsoft Edge WebView2/
+    </li>
+  <li>Ścieżka zasad grupy (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa pliku ADMX zasad grupy: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ustawienia rejestru systemu Windows</h6>
+  <ul>
+  <li>Ścieżka (Wymagane):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Ścieżka (Proponowana):
+    Nie dotyczy</li>
+  <li>Nazwa wartości:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Typ wartości:
+    REG_DWORD</li>
+  </ul>
+  <h6>Przykładowa wartość:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-—-zasady">Powrót do początku</a>
+
+
+
+<h2>Zobacz także</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Konfigurowanie przeglądarki Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Strona docelowa przeglądarki Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog poświęcony podstawom rozwiązań zabezpieczających firmy Microsoft</a></li>
+</ul>
+
+</body>
+</html>

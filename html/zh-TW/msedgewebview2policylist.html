@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---原則"></a>
+<h1>Microsoft Edge WebView2 - 原則</h1>
+最新版的 Microsoft Edge WebView2 包含下列原則。您可以使用這些原則設定 Microsoft Edge WebView2 在組織中的運行方式。
+
+有關使用其他原則集控制 Microsoft Edge WebView2 的更新方式及更新時間的詳細資訊，請參閱 <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge 更新原則參考</a>
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>注意</p>
+<p>此文章適用於 Microsoft Edge 87 版本或更新版本。</p>
+</div>
+
+<h2>可用的原則</h2>
+這些表格列出在此版 Microsoft Edge WebView2 中可用的所有群組原則。使用表格中的連結取得特定原則的更多詳細資訊。
+
+<table>
+
+<tr><td><a href="#載入器覆寫設定">載入器覆寫設定</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="載入器覆寫設定"><a href="#載入器覆寫設定-policies"><i>載入器覆寫設定</i></a></a>
+    <table>
+      <tr><th>原則名稱</th><th>標題</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>設定瀏覽器可執行檔資料夾的位置</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>設定發行通道搜尋順序喜好設定</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>原則名稱</th><th>標題</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>透過 [試驗和設定服務] 控制通訊</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="載入器覆寫設定-policies"></a>載入器覆寫設定 policies</h2>
+  <br /><a href="#microsoft-edge-webview2---原則">回到頂端</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>設定瀏覽器可執行檔資料夾的位置</h4>
+  
+  
+  <h5>支援的版本:</h5>
+  <ul><li>在 Windows 上，87 版或更新版本</li></ul>
+
+  <h5>描述</h5>
+  此原則可將 WebView2 應用程式設定為在指定的路徑中使用 WebView2 Runtime。資料夾應該包含下列檔案： msedgewebview2.exe、msedge.dll 等等。<br><br>若要設定資料夾路徑的值，請提供 [值名稱] 及 [值對]。將值名稱設定為 [應用程式使用者模型 ID] 或可執行檔名稱。您可以使用 "*" 萬用字元作為值名稱，以套用到所有應用程式。
+
+  <h5>支援功能:</h5>
+  <ul>
+  <li>
+      可以是強制:
+       是
+  </li>
+  <li>
+      可以建議:
+       否
+  </li>
+  <li>
+      動態原則重新整理:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>資料類型:</h5>
+  <ul><li>字串的清單</li></ul>
+
+
+  
+  <h5>Windows 資訊和設定</h5>
+  <h6>群組原則 (ADMX) 資訊</h6>
+  <ul>
+  <li>GP 唯一名稱: BrowserExecutableFolder</li>
+  <li>GP 名稱: 設定瀏覽器可執行檔資料夾的位置</li>
+  <li>GP 路徑 (強制):
+    
+        系統管理範本/Microsoft Edge WebView2/載入器覆寫設定
+    </li>
+  <li>GP 路徑 (推薦項目):
+    N/A</li>
+  <li>GP ADMX 檔案名稱: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 登錄設定</h6>
+  <ul>
+  <li>路徑 (強制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>路徑 (推薦項目):
+    N/A</li>
+  <li>值名稱:
+    REG_SZ 的清單
+    </li>
+  <li>數值類型:
+    REG_SZ 的清單
+    </li>
+  </ul>
+  <h6>範例值:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---原則">回到頂端</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>設定發行通道搜尋順序喜好設定</h4>
+  
+  
+  <h5>支援的版本:</h5>
+  <ul><li>在 Windows 上，87 版或更新版本</li></ul>
+
+  <h5>描述</h5>
+  預設通道搜尋順序為 WebView2 Runtime、Beta、Dev 和 Canary。<br><br>若要反向預設的搜尋順序，請將此原則設定為 1.<br><br>       若要設定發行通道喜好設定的值，請提供 [值名稱] 和 [值對]。將 [值名稱] 設定為 [應用程式使用者模型 ID] 或可執行檔名。您可以使用 "*" 萬用字元作為值名稱，以套用到所有應用程式。
+
+  <h5>支援功能:</h5>
+  <ul>
+  <li>
+      可以是強制:
+       是
+  </li>
+  <li>
+      可以建議:
+       否
+  </li>
+  <li>
+      動態原則重新整理:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>資料類型:</h5>
+  <ul><li>字串的清單</li></ul>
+
+
+  
+  <h5>Windows 資訊和設定</h5>
+  <h6>群組原則 (ADMX) 資訊</h6>
+  <ul>
+  <li>GP 唯一名稱: ReleaseChannelPreference</li>
+  <li>GP 名稱: 設定發行通道搜尋順序喜好設定</li>
+  <li>GP 路徑 (強制):
+    
+        系統管理範本/Microsoft Edge WebView2/載入器覆寫設定
+    </li>
+  <li>GP 路徑 (推薦項目):
+    N/A</li>
+  <li>GP ADMX 檔案名稱: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 登錄設定</h6>
+  <ul>
+  <li>路徑 (強制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>路徑 (推薦項目):
+    N/A</li>
+  <li>值名稱:
+    REG_SZ 的清單
+    </li>
+  <li>數值類型:
+    REG_SZ 的清單
+    </li>
+  </ul>
+  <h6>範例值:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---原則">回到頂端</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---原則">回到頂端</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>透過 [試驗和設定服務] 控制通訊</h4>
+  
+  
+  <h5>支援的版本:</h5>
+  <ul><li>在 Windows 上，97 版或更新版本</li></ul>
+
+  <h5>描述</h5>
+  使用試驗和設定服務來部署試驗和設定承載。<br><br>     試驗承載是由 Microsoft 為測試和意見反應所啟用的初期開發功能清單所組成。<br><br>     設定承載包含 Microsoft 要部署以優化使用者體驗的建議設定清單。例如，設定負載可指定傳送要求到試驗和佈建服務的頻率，以取得最新的負載。<br><br>     設定承載可能也會包含基於相容性理由，在特定網域上要採取的動作清單。例如，如果網站已中斷，瀏覽器可能會覆蓋網站上的使用者代理字串。在 Microsoft 嘗試解決網站擁有人的問題時，這些動作都是暫時性的。<br><br>     如果您將此原則設定為「FullMode」，系統就會從試驗和設定服務下載完整承載。這包括試驗和設定承載。<br><br>     如果您將此原則設定為「ConfigurationsOnlyMode」，則只會下載設定承載。<br><br>     如果您將此原則設定為「RestrictedMode」，就會完全停止與試驗和設定服務的通訊。<br><br>     如果您未在受管理的裝置上設定此原則，則 Beta 和 Stable 通道上的行為與「ConfigurationsOnlyMode」相同。在 Canary 和 Dev 通道上，行為與 'FullMode' 相同。<br><br>如果未在未管理裝置上設定此原則，則行為與「FullMode」相同。<br><br>原則選項對應:<br><br>* FullMode (2) = 擷取設定與實驗<br><br>* ConfigurationsOnlyMode (1) = 僅限擷取設定<br><br>* RestrictedMode (0) = 停用與 [試驗和設定服務] 的通訊<br><br>設定此原則時，請使用上述資訊。
+
+  <h5>支援功能:</h5>
+  <ul>
+  <li>
+      可以是強制:
+       是
+  </li>
+  <li>
+      可以建議:
+       否
+  </li>
+  <li>
+      動態原則重新整理:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>資料類型:</h5>
+  <ul><li>整數</li></ul>
+
+
+  
+  <h5>Windows 資訊和設定</h5>
+  <h6>群組原則 (ADMX) 資訊</h6>
+  <ul>
+  <li>GP 唯一名稱: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP 名稱: 透過 [試驗和設定服務] 控制通訊</li>
+  <li>GP 路徑 (強制):
+    
+        系統管理範本/Microsoft Edge WebView2/
+    </li>
+  <li>GP 路徑 (推薦項目):
+    N/A</li>
+  <li>GP ADMX 檔案名稱: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 登錄設定</h6>
+  <ul>
+  <li>路徑 (強制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>路徑 (推薦項目):
+    N/A</li>
+  <li>值名稱:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>數值類型:
+    REG_DWORD</li>
+  </ul>
+  <h6>範例值:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---原則">回到頂端</a>
+
+
+
+<h2>也可參閱</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">正在設定 Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge 企業版登陸頁面</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft 安全性基準部落格</a></li>
+</ul>
+
+</body>
+</html>

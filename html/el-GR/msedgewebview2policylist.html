@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---πολιτικές"></a>
+<h1>Microsoft Edge WebView2 - Πολιτικές</h1>
+Η τελευταία έκδοση του Microsoft Edge WebView2 περιλαμβάνει τις ακόλουθες πολιτικές. Μπορείτε να χρησιμοποιήσετε αυτές τις πολιτικές για να ρυθμίσετε τον τρόπο με τον οποίο θα εκτελείται το Microsoft Edge WebView2 στον οργανισμό σας.
+
+Για πληροφορίες σχετικά με ένα πρόσθετο σύνολο πολιτικών που χρησιμοποιούνται για τον έλεγχο του τρόπου και της χρονικής στιγμής ενημέρωσης του Microsoft Edge WebView2, ανατρέξτε στο θέμα <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Αναφορά πολιτικής ενημέρωσης του Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>ΣΗΜΕΙΩΣΗ</p>
+<p>Αυτό το άρθρο ισχύει για την έκδοση Microsoft Edge 87 ή νεότερη έκδοση.</p>
+</div>
+
+<h2>Διαθέσιμες πολιτικές</h2>
+Αυτοί οι πίνακες παραθέτουν όλες τις πολιτικές ομάδας που είναι διαθέσιμες σε αυτήν την έκδοση του Microsoft Edge WebView2. Χρησιμοποιήστε τις συνδέσεις του πίνακα για να δείτε περισσότερες λεπτομέρειες σχετικά με συγκεκριμένες πολιτικές.
+
+<table>
+
+<tr><td><a href="#Ρυθμίσεις παράκαμψης φορτωτή">Ρυθμίσεις παράκαμψης φορτωτή</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Ρυθμίσεις παράκαμψης φορτωτή"><a href="#Ρυθμίσεις παράκαμψης φορτωτή-policies"><i>Ρυθμίσεις παράκαμψης φορτωτή</i></a></a>
+    <table>
+      <tr><th>Όνομα πολιτικής</th><th>Λεζάντα</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Ρύθμιση παραμέτρων της θέσης του εκτελέσιμου φακέλου του προγράμματος περιήγησης</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Ορισμός προτιμήσεων σειράς αναζήτησης για το κανάλι κυκλοφορίας</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Όνομα πολιτικής</th><th>Λεζάντα</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Έλεγχος επικοινωνίας με την υπηρεσία πειραματισμού και ρυθμίσεων</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Ρυθμίσεις παράκαμψης φορτωτή-policies"></a>Ρυθμίσεις παράκαμψης φορτωτή policies</h2>
+  <br /><a href="#microsoft-edge-webview2---πολιτικές">Επιστροφή στην αρχή</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Ρύθμιση παραμέτρων της θέσης του εκτελέσιμου φακέλου του προγράμματος περιήγησης</h4>
+  
+  
+  <h5>Υποστηριζόμενες εκδόσεις:</h5>
+  <ul><li>Σε Windows από 87 ή νεότερο</li></ul>
+
+  <h5>Περιγραφή</h5>
+  Αυτή η πολιτική ρυθμίζει τις παραμέτρους WebView2 εφαρμογών για να χρησιμοποιήσετε το WebView2 Runtime στην καθορισμένη διαδρομή. Ο φάκελος θα πρέπει να περιέχει τα ακόλουθα αρχεία: msedgewebview2.exe, msedge.dll και ούτω καθεξής.<br><br>Για να ορίσετε την τιμή για τη διαδρομή του φακέλου, πληκτρολογήστε το όνομα της τιμής και το συνδυασμό τιμής. Ορίστε το όνομα της τιμής στο όνομα του μοντέλου χρήστη της εφαρμογής ή στο όνομα του εκτελέσιμου αρχείου. Μπορείτε να χρησιμοποιήσετε το χαρακτήρα μπαλαντέρ "*" ως όνομα τιμής για να εφαρμοστεί σε όλες τις εφαρμογές.
+
+  <h5>Υποστηριζόμενες δυνατότητες:</h5>
+  <ul>
+  <li>
+      Μπορεί να είναι υποχρεωτικό:
+       Ναι
+  </li>
+  <li>
+      Μπορεί να προταθεί:
+       Όχι
+  </li>
+  <li>
+      Ανανέωση δυναμικής πολιτικής:
+      
+      Ναι
+      
+  </li>
+  </ul>
+
+  <h5>Τύπος δεδομένων:</h5>
+  <ul><li>Λίστα συμβολοσειρών</li></ul>
+
+
+  
+  <h5>Πληροφορίες και ρυθμίσεις των Windows</h5>
+  <h6>Πληροφορίες πολιτικής ομάδας (ADMX)</h6>
+  <ul>
+  <li>Μοναδικό όνομα GP: BrowserExecutableFolder</li>
+  <li>Όνομα GP: Ρύθμιση παραμέτρων της θέσης του εκτελέσιμου φακέλου του προγράμματος περιήγησης</li>
+  <li>Διαδρομή GP (Υποχρεωτική):
+    
+        Πρότυπα διαχείρισης/Microsoft Edge WebView2/Ρυθμίσεις παράκαμψης φορτωτή
+    </li>
+  <li>Διαδρομή GP (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα αρχείου GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ρυθμίσεις μητρώου των Windows</h6>
+  <ul>
+  <li>Διαδρομή (Υποχρεωτική):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Διαδρομή (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα τιμής:
+    λίστα REG_SZ
+    </li>
+  <li>Τύπος τιμής:
+    λίστα REG_SZ
+    </li>
+  </ul>
+  <h6>Παράδειγμα τιμής:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---πολιτικές">Επιστροφή στην αρχή</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Ορισμός προτιμήσεων σειράς αναζήτησης για το κανάλι κυκλοφορίας</h4>
+  
+  
+  <h5>Υποστηριζόμενες εκδόσεις:</h5>
+  <ul><li>Σε Windows από 87 ή νεότερο</li></ul>
+
+  <h5>Περιγραφή</h5>
+  Η προεπιλεγμένη σειρά αναζήτησης καναλιού είναι το Runtime WebView2, το beta, το Dev και Canary.<br><br>Για να αντιστρέψετε την προεπιλεγμένη σειρά αναζήτησης, ορίστε αυτή την πολιτική στο 1.<br><br>Για να ορίσετε την τιμή για την προτίμηση καναλιού κυκλοφορίας, δώστε ένα όνομα τιμής και ένα ζεύγος τιμών. Ορίστε το όνομα της τιμής στο όνομα του μοντέλου χρήστη της εφαρμογής ή στο όνομα του εκτελέσιμου αρχείου. Μπορείτε να χρησιμοποιήσετε το χαρακτήρα μπαλαντέρ "*" ως όνομα τιμής για να εφαρμοστεί σε όλες τις εφαρμογές.
+
+  <h5>Υποστηριζόμενες δυνατότητες:</h5>
+  <ul>
+  <li>
+      Μπορεί να είναι υποχρεωτικό:
+       Ναι
+  </li>
+  <li>
+      Μπορεί να προταθεί:
+       Όχι
+  </li>
+  <li>
+      Ανανέωση δυναμικής πολιτικής:
+      
+      Ναι
+      
+  </li>
+  </ul>
+
+  <h5>Τύπος δεδομένων:</h5>
+  <ul><li>Λίστα συμβολοσειρών</li></ul>
+
+
+  
+  <h5>Πληροφορίες και ρυθμίσεις των Windows</h5>
+  <h6>Πληροφορίες πολιτικής ομάδας (ADMX)</h6>
+  <ul>
+  <li>Μοναδικό όνομα GP: ReleaseChannelPreference</li>
+  <li>Όνομα GP: Ορισμός προτιμήσεων σειράς αναζήτησης για το κανάλι κυκλοφορίας</li>
+  <li>Διαδρομή GP (Υποχρεωτική):
+    
+        Πρότυπα διαχείρισης/Microsoft Edge WebView2/Ρυθμίσεις παράκαμψης φορτωτή
+    </li>
+  <li>Διαδρομή GP (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα αρχείου GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ρυθμίσεις μητρώου των Windows</h6>
+  <ul>
+  <li>Διαδρομή (Υποχρεωτική):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Διαδρομή (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα τιμής:
+    λίστα REG_SZ
+    </li>
+  <li>Τύπος τιμής:
+    λίστα REG_SZ
+    </li>
+  </ul>
+  <h6>Παράδειγμα τιμής:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---πολιτικές">Επιστροφή στην αρχή</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---πολιτικές">Επιστροφή στην αρχή</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Έλεγχος επικοινωνίας με την υπηρεσία πειραματισμού και ρυθμίσεων</h4>
+  
+  
+  <h5>Υποστηριζόμενες εκδόσεις:</h5>
+  <ul><li>Σε Windows από 97 ή νεότερο</li></ul>
+
+  <h5>Περιγραφή</h5>
+  H υπηρεσία πειραματισμού και ρυθμίσεων χρησιμοποιείται για την ανάπτυξη ωφέλιμων φορτίων πειραματισμού και ρύθμισης παραμέτρων στον πελάτη.<br><br>     Το ωφέλιμο φορτίο πειραματισμού αποτελείται από μια λίστα με τις πρώιμες δυνατότητες που αναπτύσσονται από τη Microsoft με σκοπό τη δοκιμή και την παροχή σχολίων.<br><br>     Το ωφέλιμο φορτίο ρύθμισης παραμέτρων αποτελείται από μια λίστα προτεινόμενων ρυθμίσεων που θέλει να αναπτύξει η Microsoft ώστε να βελτιστοποιήσει την εμπειρία χρήστη.<br><br>Το ωφέλιμο φορτίο ρύθμισης παραμέτρων μπορεί επίσης να περιλαμβάνει μια λίστα ενεργειών που μπορούν να εκτελεστούν για λόγους συμβατότητας. Για παράδειγμα, το πρόγραμμα περιήγησης μπορεί να παρακάμπτει τη συμβολοσειρά παράγοντα χρήση σε μια τοποθεσία web, αν η συγκεκριμένη τοποθεσία είναι κατεστραμμένη. Κάθε μία από τις ενέργειες αυτές εφαρμόζονται προσωρινά όσο προσπαθεί η Microsoft να λύσει το πρόβλημα σε συνεργασία με τον κάτοχο της τοποθεσίας.<br><br>     Αν ορίσετε αυτή την πολιτική σε "FullMode", θα γίνεται λήψη του πλήρους ωφέλιμου φορτίου από την υπηρεσία πειραματισμού και ρυθμίσεων. Σε αυτό περιλαμβάνονται τόσο το ωφέλιμο φορτίο πειραματισμού όσο και το ωφέλιμο φορτίο ρύθμισης παραμέτρων.<br><br>     Αν ορίσετε αυτή την πολιτική σε "ConfigurationsOnlyMode", θα κατεβαίνει μόνο το ωφέλιμο φορτίο ρύθμισης παραμέτρων.<br><br>     Αν ορίσετε αυτήν την πολιτική σε "RestrictedMode", θα διακοπεί πλήρως η επικοινωνία με την υπηρεσία πειραματισμού και ρυθμίσεων.Η Microsoft δεν συνιστά αυτήν τη ρύθμιση.<br><br>     Αν δεν ρυθμίσετε τις παραμέτρους αυτής της πολιτικής, σε μια διαχειριζόμενη συσκευή, η συμπεριφορά στα κανάλια Stable και Beta θα είναι ίδια με τη λειτουργία "ConfigurationsOnlyMode". Στα κανάλια Canary και Dev η συμπεριφορά είναι ίδια με τη λειτουργία "FullMode".<br><br>     Αν δεν ρυθμίσετε τις παραμέτρους αυτής της πολιτικής, σε μια μη διαχειριζόμενη συσκευή, η συμπεριφορά θα είναι ίδια με τη λειτουργία "FullMode".<br><br>Αντιστοίχιση επιλογών πολιτικής:<br><br>* FullMode (2) = Ανάκτηση ρυθμίσεων παραμέτρων και πειραματισμού<br><br>* ConfigurationsOnlyMode (1) = Ανάκτηση μόνο ρυθμίσεων παραμέτρων<br><br>* RestrictedMode (0) = Απενεργοποίηση επικοινωνίας με την υπηρεσία πειραματισμού και ρυθμίσεων<br><br>Χρησιμοποιήστε τις προηγούμενες πληροφορίες κατά τη ρύθμιση των παραμέτρων αυτής της πολιτικής.
+
+  <h5>Υποστηριζόμενες δυνατότητες:</h5>
+  <ul>
+  <li>
+      Μπορεί να είναι υποχρεωτικό:
+       Ναι
+  </li>
+  <li>
+      Μπορεί να προταθεί:
+       Όχι
+  </li>
+  <li>
+      Ανανέωση δυναμικής πολιτικής:
+      
+      Ναι
+      
+  </li>
+  </ul>
+
+  <h5>Τύπος δεδομένων:</h5>
+  <ul><li>Ακέραιος</li></ul>
+
+
+  
+  <h5>Πληροφορίες και ρυθμίσεις των Windows</h5>
+  <h6>Πληροφορίες πολιτικής ομάδας (ADMX)</h6>
+  <ul>
+  <li>Μοναδικό όνομα GP: ExperimentationAndConfigurationServiceControl</li>
+  <li>Όνομα GP: Έλεγχος επικοινωνίας με την υπηρεσία πειραματισμού και ρυθμίσεων</li>
+  <li>Διαδρομή GP (Υποχρεωτική):
+    
+        Πρότυπα διαχείρισης/Microsoft Edge WebView2/
+    </li>
+  <li>Διαδρομή GP (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα αρχείου GP ADMX: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Ρυθμίσεις μητρώου των Windows</h6>
+  <ul>
+  <li>Διαδρομή (Υποχρεωτική):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Διαδρομή (Προτείνεται):
+    Δ/Υ</li>
+  <li>Όνομα τιμής:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Τύπος τιμής:
+    REG_DWORD</li>
+  </ul>
+  <h6>Παράδειγμα τιμής:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---πολιτικές">Επιστροφή στην αρχή</a>
+
+
+
+<h2>Δείτε επίσης</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Ρύθμιση παραμέτρων του Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Σελίδα προορισμού του Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Ιστολόγιο γραμμών βάσης Ασφάλειας της Microsoft</a></li>
+</ul>
+
+</body>
+</html>

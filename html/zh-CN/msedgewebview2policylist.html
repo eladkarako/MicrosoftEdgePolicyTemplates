@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2---策略"></a>
+<h1>Microsoft Edge WebView2 - 策略</h1>
+最新版本的 Microsoft Edge WebView2 包含以下策略。你可以使用这些策略配置 Microsoft Edge WebView2 在组织中的运行方式。
+
+有关用于控制 Microsoft Edge WebView2 更新的方式和时间的其他策略集的信息，请查看 <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Microsoft Edge 更新策略引用</a>
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>注意</p>
+<p>本文适用于 Microsoft Edge 版本 87 或更高版本。</p>
+</div>
+
+<h2>可用策略</h2>
+这些表列出了此版本的 Microsoft Edge WebView2 中提供的所有组策略。访问表中的链接可获取有关特定策略的更多详细信息。
+
+<table>
+
+<tr><td><a href="#加载器替代设置">加载器替代设置</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="加载器替代设置"><a href="#加载器替代设置-policies"><i>加载器替代设置</i></a></a>
+    <table>
+      <tr><th>策略名称</th><th>描述</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>配置浏览器可执行文件夹的位置</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>设置发布频道搜索顺序首选项</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>策略名称</th><th>描述</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>控制与试验和配置服务的通信</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="加载器替代设置-policies"></a>加载器替代设置 policies</h2>
+  <br /><a href="#microsoft-edge-webview2---策略">返回顶部</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>配置浏览器可执行文件夹的位置</h4>
+  
+  
+  <h5>支持的版本:</h5>
+  <ul><li>在 Windows 自 87 或之后</li></ul>
+
+  <h5>描述</h5>
+  此策略将 WebView2 应用程序配置为在指定的路径中使用 WebView2 运行时。文件夹应包含以下文件： msedgewebview2.exe、msedge.dll 等。<br><br>若要设置文件夹路径的值，请提供值名称和值对。将值名称设置为应用程序用户模型 ID 或可执行文件的名称。你可以将通配符“*”作为值名称应用于所有应用程序。
+
+  <h5>支持的功能:</h5>
+  <ul>
+  <li>
+      可以为必填字段:
+       是
+  </li>
+  <li>
+      可以推荐:
+       否
+  </li>
+  <li>
+      动态策略刷新:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>数据类型:</h5>
+  <ul><li>字符串列表</li></ul>
+
+
+  
+  <h5>Windows 信息和设置</h5>
+  <h6>组策略(ADMX)信息</h6>
+  <ul>
+  <li>GP 唯一名称: BrowserExecutableFolder</li>
+  <li>GP 名称: 配置浏览器可执行文件夹的位置</li>
+  <li>GP 路径 (强制):
+    
+        管理模板/Microsoft Edge WebView2/加载器替代设置
+    </li>
+  <li>GP 路径 (推荐):
+    不适用</li>
+  <li>GP ADMX 文件名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 注册表设置</h6>
+  <ul>
+  <li>路径 (强制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>路径 (推荐):
+    不适用</li>
+  <li>值名称:
+    REG_SZ 列表
+    </li>
+  <li>值类型:
+    REG_SZ 列表
+    </li>
+  </ul>
+  <h6>示例值:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---策略">返回顶部</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>设置发布频道搜索顺序首选项</h4>
+  
+  
+  <h5>支持的版本:</h5>
+  <ul><li>在 Windows 自 87 或之后</li></ul>
+
+  <h5>描述</h5>
+  默认频道搜索顺序是 WebView2 运行时、Beta、开发和 Canary。<br><br>反转默认搜索顺序，请将此策略设置为 1。<br><br>设置发布频道首选项的值，提供值名称和值对。将 "值名称" 设置为 "应用程序用户模型 ID" 或 "可执行文件名称"。可将通配符 "*" 用作数值名称，以便将其应用于所有应用程序。
+
+  <h5>支持的功能:</h5>
+  <ul>
+  <li>
+      可以为必填字段:
+       是
+  </li>
+  <li>
+      可以推荐:
+       否
+  </li>
+  <li>
+      动态策略刷新:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>数据类型:</h5>
+  <ul><li>字符串列表</li></ul>
+
+
+  
+  <h5>Windows 信息和设置</h5>
+  <h6>组策略(ADMX)信息</h6>
+  <ul>
+  <li>GP 唯一名称: ReleaseChannelPreference</li>
+  <li>GP 名称: 设置发布频道搜索顺序首选项</li>
+  <li>GP 路径 (强制):
+    
+        管理模板/Microsoft Edge WebView2/加载器替代设置
+    </li>
+  <li>GP 路径 (推荐):
+    不适用</li>
+  <li>GP ADMX 文件名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 注册表设置</h6>
+  <ul>
+  <li>路径 (强制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>路径 (推荐):
+    不适用</li>
+  <li>值名称:
+    REG_SZ 列表
+    </li>
+  <li>值类型:
+    REG_SZ 列表
+    </li>
+  </ul>
+  <h6>示例值:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---策略">返回顶部</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2---策略">返回顶部</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>控制与试验和配置服务的通信</h4>
+  
+  
+  <h5>支持的版本:</h5>
+  <ul><li>在 Windows 自 97 或之后</li></ul>
+
+  <h5>描述</h5>
+  试验和配置服务用于将试验和配置有效负载部署到客户端。<br><br> 试验有效负载包括 Microsoft 为测试和反馈而启用的早期开发功能列表。<br><br> 配置有效负载由 Microsoft 希望部署的推荐设置列表组成，以优化用户体验。<br><br> 配置有效负载还可能包含出于兼容性原因在某些领域采取的操作清单。例如，如果一个网站遭到破坏，浏览器可能会覆盖该网站的用户代理字符串。在 Microsoft 试图与网站所有者解决这个问题时，这些操作中的每一个则都是临时性的。<br><br> 如果你将此策略设置为 'FullMode'，则会从试验和配置服务中下载完整的有效负载。这包括试验和配置有效负载。<br><br> 如果你把这个策略设置为 'ConfigurationsOnlyMode'，则仅下载有配置有效负载。<br><br>如果你将此策略设置为 'RestrictedMode'，则与试验和配置服务的通信都将完全停止。Microsoft 不推荐这种设置。<br><br> 如果你不在受到管理的设备上配置该策略，则在 Beta 版和 Stable 频道上的操作为 'ConfigurationsOnlyMode' 相同。在 Canary 和开发人员频道上，操作与 'FullMode' 相同。<br><br> 如果不在非管理设备上配置该策略，则其操作与 'FullMode' 相同。<br><br>策略选项映射：<br><br>* FullMode (2) = 检索配置和试验<br><br>* ConfigurationsOnlyMode (1) = 仅检索配置<br><br>* RestrictedMode (0) = 禁止与试验和配置服务通信<br><br>配置此策略时，请使用上述信息。
+
+  <h5>支持的功能:</h5>
+  <ul>
+  <li>
+      可以为必填字段:
+       是
+  </li>
+  <li>
+      可以推荐:
+       否
+  </li>
+  <li>
+      动态策略刷新:
+      
+      是
+      
+  </li>
+  </ul>
+
+  <h5>数据类型:</h5>
+  <ul><li>整数</li></ul>
+
+
+  
+  <h5>Windows 信息和设置</h5>
+  <h6>组策略(ADMX)信息</h6>
+  <ul>
+  <li>GP 唯一名称: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP 名称: 控制与试验和配置服务的通信</li>
+  <li>GP 路径 (强制):
+    
+        管理模板/Microsoft Edge WebView2/
+    </li>
+  <li>GP 路径 (推荐):
+    不适用</li>
+  <li>GP ADMX 文件名: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows 注册表设置</h6>
+  <ul>
+  <li>路径 (强制):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>路径 (推荐):
+    不适用</li>
+  <li>值名称:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>值类型:
+    REG_DWORD</li>
+  </ul>
+  <h6>示例值:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2---策略">返回顶部</a>
+
+
+
+<h2>另请参阅</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">正在配置 Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge 企业登陆页</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft 安全基准博客</a></li>
+</ul>
+
+</body>
+</html>

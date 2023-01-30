@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-zásady"></a>
+<h1>Microsoft Edge WebView2 – zásady</h1>
+Nejnovější verze Microsoft Edge WebView2 obsahuje následující zásady. Jejich prostřednictvím můžete nakonfigurovat, jak bude Microsoft Edge WebView2 fungovat ve vaší organizaci.
+
+Informace o další sadě zásad, které řídí způsob a čas aktualizací Microsoft Edge WebView2, najdete v <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">referencích k zásadám aktualizace Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>POZNÁMKA</p>
+<p>Tento článek se týká prohlížeče Microsoft Edge verze 87 nebo novější.</p>
+</div>
+
+<h2>Dostupné zásady</h2>
+Tyto tabulky uvádějí všechny zásady skupiny, které jsou v této verzi Microsoft Edge WebView2 k dispozici. Prostřednictvím odkazů v tabulce získáte o jednotlivých zásadách další podrobnosti.
+
+<table>
+
+<tr><td><a href="#Nastavení potlačení zavaděče">Nastavení potlačení zavaděče</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Nastavení potlačení zavaděče"><a href="#Nastavení potlačení zavaděče-policies"><i>Nastavení potlačení zavaděče</i></a></a>
+    <table>
+      <tr><th>Název zásady</th><th>Popisek</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Konfigurovat umístění spustitelné složky prohlížeče</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Nastavit předvolby pořadí vyhledávání pro uvolnění kanálu</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Název zásady</th><th>Popisek</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Řídit komunikaci se Službou experimentálních funkcí a konfigurace</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Nastavení potlačení zavaděče-policies"></a>Nastavení potlačení zavaděče policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-zásady">Zpět na začátek</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Konfigurovat umístění spustitelné složky prohlížeče</h4>
+  
+  
+  <h5>Podporované verze:</h5>
+  <ul><li>Na platformě Windows, od 87</li></ul>
+
+  <h5>Popis</h5>
+  Tato zásada konfiguruje aplikace WebView2 za účelem využití běhu WebView2 v zadané cestě. Složka by měla obsahovat tyto soubory: msedgewebview2.exe, msedge.dll atd.<br><br>Když budete chtít nastavit hodnotu cesty ke složce, zadejte u hodnoty dvojici název-hodnota. Název hodnoty nastavte na ID uživatelského modelu aplikace nebo na název spustitelného souboru. Zástupný znak * můžete použít jako název hodnoty u všech aplikací.
+
+  <h5>Podporované funkce:</h5>
+  <ul>
+  <li>
+      Může být povinné.:
+       Ano
+  </li>
+  <li>
+      Může být doporučené.:
+       Ne
+  </li>
+  <li>
+      Dynamická aktualizace zásad:
+      
+      Ano
+      
+  </li>
+  </ul>
+
+  <h5>Datový typ:</h5>
+  <ul><li>Seznam řetězců</li></ul>
+
+
+  
+  <h5>Informace o systému Windows a jeho nastavení</h5>
+  <h6>Informace o zásadách skupiny (ADMX)</h6>
+  <ul>
+  <li>Jedinečný název zásady skupiny: BrowserExecutableFolder</li>
+  <li>Název zásady skupiny: Konfigurovat umístění spustitelné složky prohlížeče</li>
+  <li>Cesta k zásadě skupiny (Povinné):
+    
+        Šablony pro správu/Microsoft Edge WebView2/Nastavení potlačení zavaděče
+    </li>
+  <li>Cesta k zásadě skupiny (Doporučeno):
+    Není k dispozici</li>
+  <li>Název souboru ADMX zásady skupiny: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Nastavení registru Windows</h6>
+  <ul>
+  <li>Cesta (Povinné):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Cesta (Doporučeno):
+    Není k dispozici</li>
+  <li>Název hodnoty:
+    seznam REG_SZ
+    </li>
+  <li>Typ hodnoty:
+    seznam REG_SZ
+    </li>
+  </ul>
+  <h6>Příklad hodnoty:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-zásady">Zpět na začátek</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Nastavit předvolby pořadí vyhledávání pro uvolnění kanálu</h4>
+  
+  
+  <h5>Podporované verze:</h5>
+  <ul><li>Na platformě Windows, od 87</li></ul>
+
+  <h5>Popis</h5>
+  Výchozí pořadí vyhledávání kanálů je WebView2 Runtime, Beta, Dev a Canary.<br><br>Když budete chtít obrátit výchozí pořadí vyhledávání, nastavte tuto zásadu na hodnotu 1.<br><br>Když budete chtít nastavit hodnotu předvolby pro uvolnění kanálu, zadejte dvojici název-hodnota. Název hodnoty nastavte na ID uživatelského modelu aplikace nebo na název spustitelného souboru. Zástupný znak * můžete použít jako název hodnoty u všech aplikací.
+
+  <h5>Podporované funkce:</h5>
+  <ul>
+  <li>
+      Může být povinné.:
+       Ano
+  </li>
+  <li>
+      Může být doporučené.:
+       Ne
+  </li>
+  <li>
+      Dynamická aktualizace zásad:
+      
+      Ano
+      
+  </li>
+  </ul>
+
+  <h5>Datový typ:</h5>
+  <ul><li>Seznam řetězců</li></ul>
+
+
+  
+  <h5>Informace o systému Windows a jeho nastavení</h5>
+  <h6>Informace o zásadách skupiny (ADMX)</h6>
+  <ul>
+  <li>Jedinečný název zásady skupiny: ReleaseChannelPreference</li>
+  <li>Název zásady skupiny: Nastavit předvolby pořadí vyhledávání pro uvolnění kanálu</li>
+  <li>Cesta k zásadě skupiny (Povinné):
+    
+        Šablony pro správu/Microsoft Edge WebView2/Nastavení potlačení zavaděče
+    </li>
+  <li>Cesta k zásadě skupiny (Doporučeno):
+    Není k dispozici</li>
+  <li>Název souboru ADMX zásady skupiny: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Nastavení registru Windows</h6>
+  <ul>
+  <li>Cesta (Povinné):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Cesta (Doporučeno):
+    Není k dispozici</li>
+  <li>Název hodnoty:
+    seznam REG_SZ
+    </li>
+  <li>Typ hodnoty:
+    seznam REG_SZ
+    </li>
+  </ul>
+  <h6>Příklad hodnoty:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-zásady">Zpět na začátek</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-zásady">Zpět na začátek</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Řídit komunikaci se Službou experimentálních funkcí a konfigurace</h4>
+  
+  
+  <h5>Podporované verze:</h5>
+  <ul><li>Na platformě Windows, od 97</li></ul>
+
+  <h5>Popis</h5>
+  Služba experimentálních funkcí a konfigurace se používá k nasazování experimentálních a konfiguračních datových částí na klienta.<br><br>Experimentální datová část se skládá ze seznamu funkcí v raném stádiu vývoje, které Microsoft aktivuje pro účely testování a poskytování zpětné vazby.<br><br>Konfigurační datová část obsahuje seznam doporučených nastavení, která chce Microsoft nasadit s cílem optimalizovat uživatelské prostředí.<br><br>Konfigurační datová část může navíc obsahovat seznam akcí, které se mají u určitých domén provádět kvůli kompatibilitě. Prohlížeč může například na určitém webu přepsat identifikační řetězec prohlížeče, pokud je daný web narušený. Každou z těchto akcí považuje Microsoft za dočasné opatření – současně se snažíme o vyřešení tohoto problému s vlastníkem webu.<br><br>Pokud tuto zásadu nastavíte na režim FullMode, bude se ze Služby experimentálních funkcí a konfigurace stahovat celá datová část, tedy část experimentální i konfigurační.<br><br>Pokud tuto zásadu nastavíte na režim ConfigurationsOnlyMode, stáhne se pouze datová část s konfigurací.<br><br>Pokud tuto zásadu nastavíte na režim RestrictedMode, komunikace se Službou experimentálních funkcí a konfigurace se zcela zastaví. Toto nastavení Microsoft nedoporučuje.<br><br>Pokud tuto zásadu nenakonfigurujete na spravovaném zařízení, bude v kanálech Stable a Beta chování stejné jako v režimu ConfigurationsOnlyMode. V kanálech Canary a Dev bude chování stejné jako v režimu FullMode.<br><br>Pokud tuto zásadu nenakonfigurujete na nespravovaném zařízení, bude chování stejné jako v režimu FullMode.<br><br>Mapování možností zásad:<br><br>* FullMode (2) = Načíst konfigurace a experimenty<br><br>* ConfigurationsOnlyMode (1) = Načíst jen konfigurace<br><br>* RestrictedMode (0) = Zakázat komunikaci se Službou experimentálních funkcí a konfigurace<br><br>Při konfiguraci této zásady použijte předchozí údaje.
+
+  <h5>Podporované funkce:</h5>
+  <ul>
+  <li>
+      Může být povinné.:
+       Ano
+  </li>
+  <li>
+      Může být doporučené.:
+       Ne
+  </li>
+  <li>
+      Dynamická aktualizace zásad:
+      
+      Ano
+      
+  </li>
+  </ul>
+
+  <h5>Datový typ:</h5>
+  <ul><li>Celé číslo</li></ul>
+
+
+  
+  <h5>Informace o systému Windows a jeho nastavení</h5>
+  <h6>Informace o zásadách skupiny (ADMX)</h6>
+  <ul>
+  <li>Jedinečný název zásady skupiny: ExperimentationAndConfigurationServiceControl</li>
+  <li>Název zásady skupiny: Řídit komunikaci se Službou experimentálních funkcí a konfigurace</li>
+  <li>Cesta k zásadě skupiny (Povinné):
+    
+        Šablony pro správu/Microsoft Edge WebView2/
+    </li>
+  <li>Cesta k zásadě skupiny (Doporučeno):
+    Není k dispozici</li>
+  <li>Název souboru ADMX zásady skupiny: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Nastavení registru Windows</h6>
+  <ul>
+  <li>Cesta (Povinné):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Cesta (Doporučeno):
+    Není k dispozici</li>
+  <li>Název hodnoty:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Typ hodnoty:
+    REG_DWORD</li>
+  </ul>
+  <h6>Příklad hodnoty:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-zásady">Zpět na začátek</a>
+
+
+
+<h2>Viz také:</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Konfigurace Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Cílová stránka Microsoft Edge Enterprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Security Baselines Blog</a></li>
+</ul>
+
+</body>
+</html>

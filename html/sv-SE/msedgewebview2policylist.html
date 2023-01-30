@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-principer"></a>
+<h1>Microsoft Edge WebView2 – Principer</h1>
+Den senaste versionen av Microsoft Edge WebView2 har följande principer. Du kan använda de här principerna och konfigurera hur Microsoft Edge WebView2 körs i din organisation.
+
+Information om fler principer som används för att reglera hur och när Microsoft Edge WebView2 uppdateras hittar du i <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Referens för uppdateringsrelaterade principer för Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>ANMÄRKNING</p>
+<p>Den här artikeln gäller Microsoft Edge version 87 eller senare.</p>
+</div>
+
+<h2>Tillgängliga principer</h2>
+De här tabellerna listar alla grupprinciper i den här versionen av Microsoft Edge WebView2. Använd länkarna i tabellen om du vill se mer information om en viss princip.
+
+<table>
+
+<tr><td><a href="#Åsidosätt inställningar för inläsning">Åsidosätt inställningar för inläsning</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Åsidosätt inställningar för inläsning"><a href="#Åsidosätt inställningar för inläsning-policies"><i>Åsidosätt inställningar för inläsning</i></a></a>
+    <table>
+      <tr><th>Principnamn</th><th>Rubrik</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Konfigurera platsen för den körbara webbläsarens mapp</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Ange preferens för sökordning för utgivningskanal</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Principnamn</th><th>Rubrik</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Reglera kommunikation med experimenterings- och konfigurationsservice</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Åsidosätt inställningar för inläsning-policies"></a>Åsidosätt inställningar för inläsning policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-principer">Tillbaka till början</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Konfigurera platsen för den körbara webbläsarens mapp</h4>
+  
+  
+  <h5>Versioner som stöds:</h5>
+  <ul><li>På Windows sedan 87 eller senare</li></ul>
+
+  <h5>Beskrivning</h5>
+  Den här principen konfigurerar WebView2-program till att använda WebView2-körningen i den angivna sökvägen. Mappen bör innehålla följande filer: msedgewebview2.exe, msedge.dll och så vidare.<br><br>Ange värdet för mappsökvägen genom att ange ett värdenamn och ett värde-par. Ange värdenamn för programmets användarmodell-ID eller namnet på den körbara filen. Du kan använda jokertecknet "*" som värdenamn att använda för alla program.
+
+  <h5>Funktioner som stöds:</h5>
+  <ul>
+  <li>
+      Kan vara obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan vara rekommenderad:
+       Nej
+  </li>
+  <li>
+      Dynamisk principuppdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatyp:</h5>
+  <ul><li>Lista över strängar</li></ul>
+
+
+  
+  <h5>Windows-information och -inställningar</h5>
+  <h6>Info om grupprincip (ADMX)</h6>
+  <ul>
+  <li>Unikt GP-namn: BrowserExecutableFolder</li>
+  <li>GP-namn: Konfigurera platsen för den körbara webbläsarens mapp</li>
+  <li>GP-sökväg (Obligatoriskt):
+    
+        Administrativa mallar/Microsoft Edge WebView2/Åsidosätt inställningar för inläsning
+    </li>
+  <li>GP-sökväg (Rekommenderas):
+    Saknas</li>
+  <li>ADMX-filnamn för GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinställningar</h6>
+  <ul>
+  <li>Sökväg (Obligatoriskt):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Sökväg (Rekommenderas):
+    Saknas</li>
+  <li>Värdenamn:
+    lista över REG_SZ
+    </li>
+  <li>Värdetyp:
+    lista över REG_SZ
+    </li>
+  </ul>
+  <h6>Exempelvärde:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-principer">Tillbaka till början</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Ange preferens för sökordning för utgivningskanal</h4>
+  
+  
+  <h5>Versioner som stöds:</h5>
+  <ul><li>På Windows sedan 87 eller senare</li></ul>
+
+  <h5>Beskrivning</h5>
+  Standard sökordningen för kanaler är WebView2 runtime, beta, dev och kontrollvärde.<br><br>om du vill återställa standard sökordningen anger du den här principen till 1.<br><br>Om du vill ange värdet för inställning av utgivningskanal anger du ett värdenamn och värde-par. Ange namnet på programmet eller namnet på den körbara filen. Du kan använda jokertecknet "*" som värdenamn för alla program.
+
+  <h5>Funktioner som stöds:</h5>
+  <ul>
+  <li>
+      Kan vara obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan vara rekommenderad:
+       Nej
+  </li>
+  <li>
+      Dynamisk principuppdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatyp:</h5>
+  <ul><li>Lista över strängar</li></ul>
+
+
+  
+  <h5>Windows-information och -inställningar</h5>
+  <h6>Info om grupprincip (ADMX)</h6>
+  <ul>
+  <li>Unikt GP-namn: ReleaseChannelPreference</li>
+  <li>GP-namn: Ange preferens för sökordning för utgivningskanal</li>
+  <li>GP-sökväg (Obligatoriskt):
+    
+        Administrativa mallar/Microsoft Edge WebView2/Åsidosätt inställningar för inläsning
+    </li>
+  <li>GP-sökväg (Rekommenderas):
+    Saknas</li>
+  <li>ADMX-filnamn för GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinställningar</h6>
+  <ul>
+  <li>Sökväg (Obligatoriskt):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Sökväg (Rekommenderas):
+    Saknas</li>
+  <li>Värdenamn:
+    lista över REG_SZ
+    </li>
+  <li>Värdetyp:
+    lista över REG_SZ
+    </li>
+  </ul>
+  <h6>Exempelvärde:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-principer">Tillbaka till början</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-principer">Tillbaka till början</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Reglera kommunikation med experimenterings- och konfigurationsservice</h4>
+  
+  
+  <h5>Versioner som stöds:</h5>
+  <ul><li>På Windows sedan 97 eller senare</li></ul>
+
+  <h5>Beskrivning</h5>
+  Experimenterings- och konfigurationsservice används för att distribuera nyttolaster för experimentering och konfiguration till klienten.<br><br>Experimenteringsnyttolast består av en lista över tidiga utvecklingsfunktioner som Microsoft aktiverar för testning och feedback.<br><br>Konfigurationsnyttolast består av en lista över rekommenderade inställningar som Microsoft vill distribuera för att optimera användarupplevelsen.<br><br>Konfigurationsnyttolast kan också innehålla en lista över åtgärder som ska vidtas på vissa domäner av kompatibilitetsskäl. Webbläsaren kan till exempel åsidosätta användaragentsträngen på en webbplats om webbplatsen är skadad. Var och en av dessa åtgärder är avsedda att vara tillfälliga medan Microsoft försöker lösa problemet med webbplatsägaren.<br><br>Om du ställer in den här principen på FullMode hämtas den fullständiga nyttolasten från experimenterings- och konfigurationsservicen. Detta omfattar både experimenterings- och konfigurationsnyttolaster.<br><br>Om du ställer in den här principen på ConfigurationsOnlyMode laddas endast konfigurationsnyttolasten ned.<br><br>Om du ställer in den här principen på RestrictedMode stoppas kommunikationen med experimenterings- och konfigurationsservicen helt. Microsoft rekommenderar inte den här inställningen.<br><br>Om du inte konfigurerar den här principen på en hanterad enhet är beteendet för kanalerna Beta och Stable samma som ConfigurationsOnlyMode. På Canary- och Dev-kanaler är beteendet detsamma som "FullMode".<br><br>Om du inte konfigurerar den här principen på en ohanterad enhet är beteendet detsamma som FullMode.<br><br>Kartläggning av policyalternativ:<br><br>* FullMode (2) = Hämta konfigurationer och experiment<br><br>* ConfigurationsOnlyMode (1) = Hämta endast konfigurationer<br><br>* RestrictedMode (0) = Inaktivera kommunikation med experimenterings- och konfigurationsservice<br><br>Använd föregående information när du konfigurerar principen.
+
+  <h5>Funktioner som stöds:</h5>
+  <ul>
+  <li>
+      Kan vara obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan vara rekommenderad:
+       Nej
+  </li>
+  <li>
+      Dynamisk principuppdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatyp:</h5>
+  <ul><li>Heltal</li></ul>
+
+
+  
+  <h5>Windows-information och -inställningar</h5>
+  <h6>Info om grupprincip (ADMX)</h6>
+  <ul>
+  <li>Unikt GP-namn: ExperimentationAndConfigurationServiceControl</li>
+  <li>GP-namn: Reglera kommunikation med experimenterings- och konfigurationsservice</li>
+  <li>GP-sökväg (Obligatoriskt):
+    
+        Administrativa mallar/Microsoft Edge WebView2/
+    </li>
+  <li>GP-sökväg (Rekommenderas):
+    Saknas</li>
+  <li>ADMX-filnamn för GP: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Windows-registerinställningar</h6>
+  <ul>
+  <li>Sökväg (Obligatoriskt):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Sökväg (Rekommenderas):
+    Saknas</li>
+  <li>Värdenamn:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Värdetyp:
+    REG_DWORD</li>
+  </ul>
+  <h6>Exempelvärde:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-principer">Tillbaka till början</a>
+
+
+
+<h2>Se även</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Konfigurera Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Företagets landningssida i Microsoft Edge</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Microsoft Security riktlinjesblogg</a></li>
+</ul>
+
+</body>
+</html>

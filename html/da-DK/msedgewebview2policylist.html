@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/10/2023">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="microsoft-edge-webview2-–-politikker"></a>
+<h1>Microsoft Edge WebView2 – politikker</h1>
+Den nyeste version af Microsoft Edge WebView2 indeholder følgende politikker. Du kan bruge disse politikker til at konfigurere, hvordan Microsoft Edge WebView2 kører i organisationen.
+
+Hvis du vil have oplysninger om et ekstra sæt politikker, der bruges til at styre, hvordan og hvornår Microsoft Edge WebView2 opdateres, skal du tjekke <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Reference til politik for Microsoft Edge-opdatering</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>BEMÆRK!</p>
+<p>Denne artikel gælder for Microsoft Edge version 87 eller nyere.</p>
+</div>
+
+<h2>Tilgængelige politikker</h2>
+I disse tabeller vises alle de gruppepolitikker, der er tilgængelige i denne version af Microsoft Edge WebView2. Brug linkene i tabellen til at få flere oplysninger om specifikke politikker.
+
+<table>
+
+<tr><td><a href="#Indlæser indstillinger for tilsidesættelse">Indlæser indstillinger for tilsidesættelse</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Indlæser indstillinger for tilsidesættelse"><a href="#Indlæser indstillinger for tilsidesættelse-policies"><i>Indlæser indstillinger for tilsidesættelse</i></a></a>
+    <table>
+      <tr><th>Politiknavn</th><th>Billedtekst</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Konfigurer placeringen af browserens eksekverbare mappe</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Angiv indstillingen for udgivelseskanalens søgerækkefølge</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Politiknavn</th><th>Billedtekst</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Styr kommunikationen med Eksperimenterings- og konfigurationstjenesten</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Indlæser indstillinger for tilsidesættelse-policies"></a>Indlæser indstillinger for tilsidesættelse policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-politikker">Tilbage til toppen</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Konfigurer placeringen af browserens eksekverbare mappe</h4>
+  
+  
+  <h5>Understøttede versioner:</h5>
+  <ul><li>På Windows siden 87 eller nyere</li></ul>
+
+  <h5>Beskrivelse</h5>
+  Denne politik konfigurerer WebView2-programmer til at bruge WebView2 Runtime på den angivne sti. Mappen skal indeholde følgende filer: msedgewebview2.exe, msedge.dll osv.<br><br>Hvis du vil angive værdien for mappestien, skal du angive et værdinavn og et værdipar. Angiv værdinavnet til programbrugerens modul-id eller til navnet på den eksekverbare fil. Du kan bruge jokertegnet "*" som værdinavn for at anvende det på alle programmer.
+
+  <h5>Understøttede funktioner:</h5>
+  <ul>
+  <li>
+      Kan være obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan anbefales:
+       Nej
+  </li>
+  <li>
+      Dynamisk politikopdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatype:</h5>
+  <ul><li>Liste over strenge</li></ul>
+
+
+  
+  <h5>Windows-oplysninger og -indstillinger</h5>
+  <h6>Oplysninger om gruppepolitik (ADMX)</h6>
+  <ul>
+  <li>Entydigt navn på GP: BrowserExecutableFolder</li>
+  <li>Navn på GP: Konfigurer placeringen af browserens eksekverbare mappe</li>
+  <li>GP-sti (Obligatorisk):
+    
+        Administrative skabeloner/Microsoft Edge WebView2/Indlæser indstillinger for tilsidesættelse
+    </li>
+  <li>GP-sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Navn på GP ADMX-fil: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Indstillinger i Windows-registreringsdatabasen</h6>
+  <ul>
+  <li>Sti (Obligatorisk):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Værdinavn:
+    liste over REG_SZ
+    </li>
+  <li>Værditype:
+    liste over REG_SZ
+    </li>
+  </ul>
+  <h6>Eksempelværdi:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-politikker">Tilbage til toppen</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Angiv indstillingen for udgivelseskanalens søgerækkefølge</h4>
+  
+  
+  <h5>Understøttede versioner:</h5>
+  <ul><li>På Windows siden 87 eller nyere</li></ul>
+
+  <h5>Beskrivelse</h5>
+  Standardsøgerækkefølgen for kanaler er WebView2 Runtime, Beta, Dev og Canary.<br><br>Hvis du vil ændre standardsøgerækkefølgen, skal du angive denne politik til 1.<br><br>Hvis du vil angive værdien for indstillingen for udgivelseskanalen, skal du angive et værdinavn og et værdipar. Angiv værdinavnet til programbrugerens modul-id eller til navnet på den eksekverbare fil. Du kan bruge jokertegnet "*" som værdinavn for at anvende det på alle programmer.
+
+  <h5>Understøttede funktioner:</h5>
+  <ul>
+  <li>
+      Kan være obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan anbefales:
+       Nej
+  </li>
+  <li>
+      Dynamisk politikopdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatype:</h5>
+  <ul><li>Liste over strenge</li></ul>
+
+
+  
+  <h5>Windows-oplysninger og -indstillinger</h5>
+  <h6>Oplysninger om gruppepolitik (ADMX)</h6>
+  <ul>
+  <li>Entydigt navn på GP: ReleaseChannelPreference</li>
+  <li>Navn på GP: Angiv indstillingen for udgivelseskanalens søgerækkefølge</li>
+  <li>GP-sti (Obligatorisk):
+    
+        Administrative skabeloner/Microsoft Edge WebView2/Indlæser indstillinger for tilsidesættelse
+    </li>
+  <li>GP-sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Navn på GP ADMX-fil: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Indstillinger i Windows-registreringsdatabasen</h6>
+  <ul>
+  <li>Sti (Obligatorisk):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Værdinavn:
+    liste over REG_SZ
+    </li>
+  <li>Værditype:
+    liste over REG_SZ
+    </li>
+  </ul>
+  <h6>Eksempelværdi:</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-politikker">Tilbage til toppen</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#microsoft-edge-webview2-–-politikker">Tilbage til toppen</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Styr kommunikationen med Eksperimenterings- og konfigurationstjenesten</h4>
+  
+  
+  <h5>Understøttede versioner:</h5>
+  <ul><li>På Windows siden 97 eller nyere</li></ul>
+
+  <h5>Beskrivelse</h5>
+  Eksperimenterings- og konfigurationstjenesten bruges til at installere eksperimenterings- og konfigurationsdata til klienten.<br><br> Eksperimenteringsdata består af en liste over funktioner, der er tidligt i udvikling, som Microsoft aktiverer til test og feedback.<br><br>Konfigurationsdata består af en liste over anbefalede indstillinger, som Microsoft vil installere for at optimere brugeroplevelsen.<br><br> Konfigurationsdata kan også indeholde en liste over handlinger, der skal udføres på bestemte domæner af hensyn til kompatibiliteten. Browseren kan f.eks. tilsidesætte brugeragentstrengen på et websted, hvis webstedet er brudt. Hver af disse handlinger er beregnet til at være midlertidige, mens Microsoft forsøger at løse problemet med ejeren af webstedet.<br><br> Hvis du angiver denne politik til "FullMode", downloades de fulde data fra Eksperimenterings- og konfigurationstjenesten. Dette omfatter både eksperimenterings- og konfigurationsdata.<br><br> Hvis du angiver denne politik til "ConfigurationsOnlyMode", er det kun konfigurationsdataene, der hentes.<br><br> Hvis du angiver denne politik til "RestrictedMode", stoppes kommunikationen med Eksperimenterings- og konfigurationstjenesten helt. Microsoft anbefaler ikke denne indstilling.<br><br> Hvis du undlader at konfigurere denne politik på en administreret enhed, er funktionsmåden på beta- og stabile kanaler den samme som "ConfigurationsOnlyMode". På Canary- og Dev-kanaler er funktionsmåden den samme som 'FullMode'.<br><br> Hvis du undlader at konfigurere denne politik på en ikke-administreret enhed, er funktionsmåden den samme som "FullMode".<br><br>Tilknytning af politikindstillinger:<br><br>* FullMode (2) = Hent konfigurationer og eksperimenter<br><br>* ConfigurationsOnlyMode (1) = Hent kun konfigurationer<br><br>* RestrictedMode (0) = Deaktiver kommunikation med Eksperimenterings- og konfigurationstjenesten<br><br>Brug de forudgående oplysninger, når du konfigurerer denne politik.
+
+  <h5>Understøttede funktioner:</h5>
+  <ul>
+  <li>
+      Kan være obligatorisk:
+       Ja
+  </li>
+  <li>
+      Kan anbefales:
+       Nej
+  </li>
+  <li>
+      Dynamisk politikopdatering:
+      
+      Ja
+      
+  </li>
+  </ul>
+
+  <h5>Datatype:</h5>
+  <ul><li>Heltal</li></ul>
+
+
+  
+  <h5>Windows-oplysninger og -indstillinger</h5>
+  <h6>Oplysninger om gruppepolitik (ADMX)</h6>
+  <ul>
+  <li>Entydigt navn på GP: ExperimentationAndConfigurationServiceControl</li>
+  <li>Navn på GP: Styr kommunikationen med Eksperimenterings- og konfigurationstjenesten</li>
+  <li>GP-sti (Obligatorisk):
+    
+        Administrative skabeloner/Microsoft Edge WebView2/
+    </li>
+  <li>GP-sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Navn på GP ADMX-fil: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Indstillinger i Windows-registreringsdatabasen</h6>
+  <ul>
+  <li>Sti (Obligatorisk):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Sti (Anbefalet):
+    Ikke tilgængelig</li>
+  <li>Værdinavn:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Værditype:
+    REG_DWORD</li>
+  </ul>
+  <h6>Eksempelværdi:</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#microsoft-edge-webview2-–-politikker">Tilbage til toppen</a>
+
+
+
+<h2>Se også</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Konfigurerer Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Microsoft Edge Enterprise-startside</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog for Microsoft-sikkerhedsgrundlinjer</a></li>
+</ul>
+
+</body>
+</html>
